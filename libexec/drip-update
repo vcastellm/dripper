@@ -13,5 +13,6 @@ if [ ! -d .git ]; then
   git fetch origin
   git reset --hard origin/master
 else
-  git checkout -q master
+  git pull --rebase
+  git checkout master
 fi
