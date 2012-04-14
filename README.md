@@ -1,20 +1,20 @@
 Dripper
 =======
 
-Dripper is a collection of scripts to install software packages with
-[stow].
+Dripper is a collection of scripts (drips) to install software packages
+with [stow].
 
-You can install [stow] on [Ubuntu] by running:
+Install [stow] on [Ubuntu] by running:
 
-    sudo apt-get -y install stow
+    sudo apt-get install stow
 
-You can install [stow] on [RedHat] based distros by running:
+Install [stow] on [RedHat] based distros by running:
 
-    sudo yum -y install stow
+    sudo yum install stow
 
 
-Installing
-----------
+Install
+-------
 
 Clone the repository and run the install script:
 
@@ -77,6 +77,7 @@ TODO and Whishlist
 - Package and install from url.
 - Store downloaded packages and use them instead when needed.
 - Task to remove downloaded packages.
+- Versions of `drips`.
 
 
 Acknowledgements
