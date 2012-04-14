@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# Verify Git is installed:
 if [ ! $(which git) ]; then
   echo "Dripper needs \`git' installed on the system."
   exit
