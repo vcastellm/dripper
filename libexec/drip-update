@@ -8,8 +8,10 @@ cd $LOCAL_PATH
 
 if [ ! -d .git ]; then
   git init
+  git config core.autocrlf false
   git remote add origin $REPOSITORY
-  git pull origin master
+  git fetch origin
+  git reset --hard origin/master
 else
-  git pull origin master
+  git checkout -q master
 fi
