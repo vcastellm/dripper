@@ -29,6 +29,6 @@ if [ ! -z $DRIP_INSTALL ]; then
 fi
 
 if [ ! -z $DRIP_UNINSTALL ]; then
-  echo "No uninstall formula provied."
+  echo "No uninstall formula provided."
   exit
 fi
