@@ -22,23 +22,43 @@ Clone the repository and run the install script:
     cd dripper
     ./install.sh
 
+If you need to uninstall `dripper`:
 
-Uninstalling
-------------
-
-Remove `/usr/local` or `$HOME/.packages` folder.
+    rm -rf $HOME/.packages
+    rm -rf /usr/local
 
 
-Available Commands
-------------------
+Usage
+-----
 
-Get a list of all available commands by running `drip`.
+Install a `drip`:
+
+    drip install redis
+
+Uninstall a `drip`:
+
+    drip uninstall redis
+
+Disable a `drip`:
+
+    drip unlink redis
+
+Update the system:
+
+    drip update
+
+You can get a list of all available commands by running `drip`.
 
 
 Requirements
 ------------
 
-Some `stows` require `hg`. You can install it using pip:
+You'll need `git` to be able to update drips:
+
+    drip install git
+
+Some `stows` require `hg`. At this moment the best thing you can do
+to install Mercurial is by using `pip`:
 
     sudo easy_install pip
     sudo pip install mercurial
