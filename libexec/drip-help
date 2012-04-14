@@ -7,7 +7,7 @@ The most commonly used drip commands are:
    list       List available drips
    install    Install a drip
    uninstall  Uninstall a drip
-   update     Update drip repository (Pending)
+   update     Update drip repository
    show       Show a drip
    package    Build a package and install (Pending)
    info       Show package information
