@@ -16,12 +16,9 @@ You can install [stow] on [RedHat] based distros by running:
 Installing
 ----------
 
-Clone the stow repository:
+Clone the repository and run the install script:
 
     git clone git://github.com/fesplugas/dripper.git
-
-Install:
-
     cd dripper
     ./install.sh
 
