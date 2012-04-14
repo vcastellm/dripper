@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ ! $(which hg) ]; then
+  echo "Dripper needs \`hg' installed on the system."
+  exit
+fi
+
 PACKAGE=vim
 [ -z $VERSION ] && VERSION='v7-3-492'
 
