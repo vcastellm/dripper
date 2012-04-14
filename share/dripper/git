@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+PACKAGE=git
+VERSION=1.7.10
+
+set_variables
+
+if [ ! -z $DRIP_INSTALL ]; then
+  pushd $TMPDIR
+  curl -O http://git-core.googlecode.com/files/$STOW.tar.gz
+  tar xf $STOW.tar.gz
+  cd $STOW
+  ./configure --prefix=$PREFIX
+  make && make install
+  popd
+fi

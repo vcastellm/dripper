@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+[ ! -z $DEBUG ] && set -x
+
+if (( UID == 0 )) ; then
+  LOCAL_PATH=/usr/local
+else
+  LOCAL_PATH=$HOME/.packages
+fi
+
+mkdir -p $LOCAL_PATH/stow
+mkdir -p $LOCAL_PATH/{bin,etc,share,include,lib,libexec,var,info,man}
+mkdir -p $LOCAL_PATH/Library

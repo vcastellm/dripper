@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+PACKAGE=node
+VERSION=v0.6.15
+
+set_variables
+
+if [ ! -z $DRIP_INSTALL ]; then
+  pushd $TMPDIR
+  curl -O http://nodejs.org/dist/$VERSION/$STOW.tar.gz
+  tar xvf $STOW.tar.gz
+  cd $STOW
+  ./configure --prefix=$PREFIX
+  make && make install
+  popd
+fi

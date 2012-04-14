@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+DRIP_INFO=true
+
+source drip-helper
+source drip-base
+source drip-validator
+
+# Drip exists and is not installed, so go for it!
+source $DRIPS_PATH/$1
+
+# Drip should exit if information is shown."
+echo "No info provided."

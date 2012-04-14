@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+darwin_only
+
+PACKAGE=ImageMagick
+VERSION=6.7.5
+PACKAGE_BINARY=ImageMagick-x86_64-apple-darwin11.3.0.tar.gz
+
+set_variables
+
+if [ ! -z $DRIP_INSTALL ]; then
+  pushd $TMPDIR
+  curl -O http://www.imagemagick.org/download/binaries/$PACKAGE_BINARY
+  tar xzf $PACKAGE_BINARY
+  mv $STOW $STOW_PATH
+  popd
+fi

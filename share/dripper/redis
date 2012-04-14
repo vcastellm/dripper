@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+PACKAGE=redis
+VERSION=2.4.10
+
+set_variables
+
+if [ ! -z $DRIP_INSTALL ]; then
+  pushd $TMPDIR
+  curl -O http://redis.googlecode.com/files/$STOW.tar.gz
+  tar xzf $STOW.tar.gz
+  cd $STOW
+  make PREFIX=$PREFIX install
+  popd
+fi

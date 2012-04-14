@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+PACKAGE=ack
+VERSION=1.96
+
+set_variables
+
+if [ ! -z $DRIP_INSTALL ]; then
+  mkdir -p $PREFIX/bin
+
+  pushd $TMPDIR
+  curl -O https://nodeload.github.com/petdance/ack/tarball/$VERSION
+  tar xzf $VERSION
+  cd petdance-ack*
+  mv ack $PREFIX/bin
+  popd
+fi

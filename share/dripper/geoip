@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+PACKAGE=GeoIP
+VERSION=1.4.8
+
+set_variables
+
+if [ ! -z $DRIP_INSTALL ]; then
+  pushd $TMPDIR
+  curl -O http://www.maxmind.com/download/geoip/api/c/$STOW.tar.gz
+  tar xf $STOW.tar.gz
+  cd $STOW
+  ./configure --prefix=$PREFIX
+  make && make install
+  popd
+fi

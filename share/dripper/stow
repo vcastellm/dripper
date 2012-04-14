@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+PACKAGE=stow
+[ -z $VERSION ] && VERSION=1.3.3
+
+set_variables
+
+if [ ! -z $DRIP_INSTALL ]; then
+  pushd $TMPDIR
+  curl -O http://ftp.gnu.org/pub/gnu/stow/$STOW.tar.gz
+  tar xzf $STOW.tar.gz
+  cd $STOW
+  ./configure --prefix=$PREFIX
+  make install
+  popd
+  $PREFIX/bin/stow -d $STOW_PATH $STOW
+  # Skip default task!
+  exit
+fi

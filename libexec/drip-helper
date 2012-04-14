@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+darwin_only() {
+  if (( ! uname == 'Darwin' )) ; then
+    echo "Drip no only valid for Darwin."
+    exit
+  fi
+}
+
+set_variables() {
+  STOW_PATH=$LOCAL_PATH/stow
+  STOW=$PACKAGE-$VERSION
+
+  PREFIX=$STOW_PATH/$STOW
+
+  TMPDIR=$(mktemp -d /tmp/stows-$STOW.XXXXXXXXXX)
+}
+
+drip_link() {
+  stow -v -d $STOW_PATH $STOW
+}
+
+drip_unlink() {
+  stow -v -D -d $STOW_PATH $STOW
+}
+
+drip_remove() {
+  rm -rf $STOW_PATH/$STOW
+}
+
+list_drips() {
+  { for drip in "${DRIPS_PATH}/"*; do
+      echo "${drip##*/}"
+    done
+  } | sort
+}
+
+resolve_link() {
+  $(type -p greadlink readlink | head -1) "$1"
+}
+
+abs_dirname() {
+  local cwd="$(pwd)"
+  local path="$1"
+
+  while [ -n "$path" ]; do
+    cd "${path%/*}"
+    local name="${path##*/}"
+    path="$(resolve_link "$name" || true)"
+  done
+
+  pwd
+  cd "$cwd"
+}
+
+DRIPPER_PATH="$(abs_dirname "$0")/.."
+DRIPS_PATH="${DRIPPER_PATH}/share/dripper"

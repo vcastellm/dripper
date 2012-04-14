@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# If no drip provided, then exit.
+if [ ! $1 ]; then
+  echo "No drip provided. Get a list with \`drip list'."
+  exit 1
+fi
+
+# TODO: Verify provided drip.
+
+# TODO: Verify if drip is already installed, otherwise exit.

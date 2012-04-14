@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+source drip-base
+
+REPOSITORY=git://github.com/fesplugas/dripper.git
+
+cd $LOCAL_PATH
+
+if [ ! -d .git ]; then
+  git init
+  git remote add origin $REPOSITORY
+  git pull origin master
+else
+  git pull
+fi

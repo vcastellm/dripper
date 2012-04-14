@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+PACKAGE=vim
+[ -z $VERSION ] && VERSION='v7-3-492'
+
+set_variables
+
+if [ ! -z $DRIP_INSTALL ]; then
+  pushd $TMPDIR
+  hg clone --updaterev $VERSION https://vim.googlecode.com/hg/ $STOW
+  cd $STOW
+  ./configure --prefix=$PREFIX \
+    --enable-gui=no \
+    --without-x \
+    --disable-nls \
+    --enable-multibyte \
+    --with-tlib=ncurses \
+    --enable-pythoninterp \
+    --enable-rubyinterp \
+    --with-features=huge
+  make && make install
+  popd
+fi

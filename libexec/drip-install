@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+DRIP_INSTALL=true
+
+source drip-helper
+source drip-base
+source drip-validator
+source $DRIPS_PATH/$1
+
+drip_link

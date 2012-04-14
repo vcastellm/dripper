@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+PACKAGE=memcached
+VERSION=1.4.13
+
+set_variables
+
+LIBEVENT_STOW=libevent-2.0.18-stable
+LIBEVENT_STOW_PATH=$STOW_PATH/$LIBEVENT_STOW
+
+if [ ! -z $DRIP_INSTALL ]; then
+  pushd $TMPDIR
+  curl -O http://cloud.github.com/downloads/libevent/libevent/$LIBEVENT_STOW.tar.gz
+  tar xzf $LIBEVENT_STOW.tar.gz
+  cd $LIBEVENT_STOW
+  ./configure --prefix=$LIBEVENT_STOW_PATH
+  make && make install
+  popd
+
+  pushd $TMPDIR
+  curl -O http://memcached.googlecode.com/files/$STOW.tar.gz
+  tar xzf $STOW.tar.gz
+  cd $STOW
+  ./configure \
+    --prefix=$PREFIX \
+    --with-libevent=$LIBEVENT_STOW_PATH
+  make && make install
+  popd
+fi
+
+if [ ! -z $DRIP_UNINSTALL ]; then
+  echo "No uninstall formula provied."
+  exit
+fi

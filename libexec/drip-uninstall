@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+DRIP_UNINSTALL=true
+
+source drip-helper
+source drip-base
+source drip-validator
+source $DRIPS_PATH/$1
+
+drip_unlink
+drip_remove
