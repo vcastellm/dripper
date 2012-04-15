@@ -9,8 +9,10 @@ echo "Version: $VERSION"
 
 if [ ! -z $DRIP_INSTALL ]; then
   echo "=> Install"
+  exit
 fi
 
 if [ ! -z $DRIP_INFO ]; then
   echo "=> Info"
+  exit
 fi
