@@ -2,7 +2,8 @@ Dripper
 =======
 
 Dripper is a collection of scripts (drips) to install software packages
-with [stow].
+with [stow], so before starting to drip, you need to install [stow] on
+your machine.
 
 Install [stow] on [Ubuntu] by running:
 
@@ -74,9 +75,9 @@ under `/usr/local/stow` or `$HOME/.packages/stow`.
 TODO and Whishlist
 ------------------
 
+- Stow installer.
 - Package and install from url.
 - Store downloaded packages and use them instead when needed.
-- Task to remove downloaded packages.
 - Versions of `drips`.
 
 
