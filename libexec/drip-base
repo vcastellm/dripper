@@ -3,6 +3,8 @@
 set -e
 [ ! -z $DEBUG ] && set -x
 
+VERSION='0.0.1'
+
 if (( UID == 0 )) ; then
   LOCAL_PATH=/usr/local
 else
