@@ -13,6 +13,10 @@ Install [stow] on [RedHat] based distros by running:
 
     sudo yum install stow
 
+You can also install `stow` using `dripper`:
+
+    drip install stow-1.3.3
+
 
 Install
 -------
@@ -45,15 +49,15 @@ Usage
 
 Install a `drip`:
 
-    drip install redis
+    drip install redis-2.4.10
 
 Uninstall a `drip`:
 
-    drip uninstall redis
+    drip uninstall redis-2.4.10
 
 Disable a `drip`:
 
-    drip unlink redis
+    drip unlink redis-2.4.10
 
 Update the system:
 
@@ -67,7 +71,7 @@ Requirements
 
 You'll need `git` to be able to update drips:
 
-    drip install git
+    drip install git-1.7.1.0
 
 Some `stows` require `hg`. At this moment the best thing you can do
 to install Mercurial is by using `pip`:
