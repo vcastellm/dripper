@@ -1,20 +1,39 @@
 #!/usr/bin/env bash
 
-source ./libexec/drip-base
-source ./libexec/drip-helper
+set -e
+[ -n "$DEBUG" ] && set -x
+
+VERSION='0.0.1'
+
+resolve_link() {
+  $(type -p greadlink readlink | head -1) $1
+}
+
+abs_dirname() {
+  local cwd="$(pwd)"
+  local path="$1"
+
+  while [ -n "$path" ]; do
+    cd "${path%/*}"
+    local name="${path##*/}"
+    path="$(resolve_link "$name" || true)"
+  done
+
+  pwd
+  cd "$cwd"
+}
 
 bin_path="$(abs_dirname "$0")"
 libexec_path="${bin_path}/../libexec"
 export PATH="${libexec_path}:${bin_path}:${PATH}"
 
 command="$1"
-command_path="$(command -v "drip-$command" || true)"
-
 case "$command" in
 "" | "-h" | "--help" )
   echo -e "$(drip-help)" >&2
   ;;
 * )
+  command_path="$(command -v "drip-$command" || true)"
   if [ -z "$command_path" ]; then
     echo "drip: no such command \`$command'" >&2
     exit 1
