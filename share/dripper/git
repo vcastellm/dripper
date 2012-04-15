@@ -14,4 +14,8 @@ if [ ! -z $DRIP_INSTALL ]; then
     --prefix=$PREFIX
   make && make install
   popd
+
+  COMPLETION_PATH=$PREFIX/etc/bash_completion.d
+  mkdir -p $COMPLETION_PATH
+  cp $SRC_PATH/$STOW/contrib/completion/git-completion.bash $COMPLETION_PATH
 fi
