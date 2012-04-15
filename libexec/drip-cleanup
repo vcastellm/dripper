@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+source drip-base
+source drip-helper
+
+rm -rfv $SRC_PATH
