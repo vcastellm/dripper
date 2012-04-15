@@ -13,5 +13,6 @@ The most commonly used drip commands are:
    info       Show package information
    link       Link package
    unlink     Unlink package
+   cleanup    Remove all sources.
 
 See 'drip help <command>' for information on a specific command."

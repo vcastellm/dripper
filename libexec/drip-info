@@ -2,8 +2,8 @@
 
 DRIP_INFO=true
 
-source drip-helper
 source drip-base
+source drip-helper
 source drip-validator
 
 # Drip exists and is not installed, so go for it!

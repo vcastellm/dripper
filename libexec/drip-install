@@ -2,8 +2,8 @@
 
 DRIP_INSTALL=true
 
-source drip-helper
 source drip-base
+source drip-helper
 source drip-validator
 source $DRIPS_PATH/$1
 

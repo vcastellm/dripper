@@ -9,7 +9,12 @@ else
   LOCAL_PATH=$HOME/.packages
 fi
 
-mkdir -p $LOCAL_PATH/{stow,src}
+SRC_PATH=$LOCAL_PATH/src
+STOW_PATH=$LOCAL_PATH/stow
+
+mkdir -p $SRC_PATH
+mkdir -p $STOW_PATH
+
 mkdir -p $LOCAL_PATH/{bin,etc,include,lib,libexec,var,info}
 mkdir -p $LOCAL_PATH/share/man/{man1,man2,man3,man4,man5,man6,man7,man8,man9,mann}
 mkdir -p $LOCAL_PATH/Library

@@ -15,13 +15,8 @@ require_hg() {
 }
 
 set_variables() {
-  SRC_PATH=$LOCAL_PATH/src
-
-  STOW_PATH=$LOCAL_PATH/stow
   STOW=$PACKAGE-$VERSION
-
   PREFIX=$STOW_PATH/$STOW
-
   TMPDIR=$(mktemp -d /tmp/stows-$STOW.XXXXXXXXXX)
 }
 
