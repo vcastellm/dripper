@@ -10,7 +10,8 @@ if [ ! -z $DRIP_INSTALL ]; then
   pushd $SRC_PATH
   hg clone --updaterev $VERSION https://vim.googlecode.com/hg/ $STOW
   cd $STOW
-  ./configure --prefix=$PREFIX \
+  ./configure \
+    --prefix=$PREFIX \
     --enable-gui=no \
     --without-x \
     --disable-nls \

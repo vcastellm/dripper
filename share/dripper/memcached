@@ -13,7 +13,8 @@ if [ ! -z $DRIP_INSTALL ]; then
   curl -O http://cloud.github.com/downloads/libevent/libevent/$LIBEVENT_STOW.tar.gz
   tar xzf $LIBEVENT_STOW.tar.gz
   cd $LIBEVENT_STOW
-  ./configure --prefix=$LIBEVENT_STOW_PATH
+  ./configure \
+    --prefix=$LIBEVENT_STOW_PATH
   make && make install
   popd
 

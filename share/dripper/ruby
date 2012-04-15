@@ -13,7 +13,8 @@ if [ ! -z $DRIP_INSTALL ]; then
   curl -O http://pyyaml.org/download/libyaml/$YAML_STOW.tar.gz
   tar xzf $YAML_STOW.tar.gz
   cd $YAML_STOW
-  ./configure --prefix=$YAML_STOW_PATH
+  ./configure \
+    --prefix=$YAML_STOW_PATH
   make install
   popd
 

@@ -10,7 +10,8 @@ if [ ! -z $DRIP_INSTALL ]; then
   curl -O http://www.maxmind.com/download/geoip/api/c/$STOW.tar.gz
   tar xf $STOW.tar.gz
   cd $STOW
-  ./configure --prefix=$PREFIX
+  ./configure \
+    --prefix=$PREFIX
   make && make install
   popd
 fi

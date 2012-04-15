@@ -10,7 +10,8 @@ if [ ! -z $DRIP_INSTALL ]; then
   curl -O http://sphinxsearch.com/files/$STOW-release.tar.gz
   tar xzf $STOW-release.tar.gz
   cd $STOW-release
-  ./configure --prefix=$PREFIX
+  ./configure \
+    --prefix=$PREFIX
   make && make install
   popd
 fi

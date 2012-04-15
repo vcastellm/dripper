@@ -10,7 +10,8 @@ if [ ! -z $DRIP_INSTALL ]; then
   curl -O http://git-core.googlecode.com/files/$STOW.tar.gz
   tar xf $STOW.tar.gz
   cd $STOW
-  ./configure --prefix=$PREFIX
+  ./configure \
+    --prefix=$PREFIX
   make && make install
   popd
 fi

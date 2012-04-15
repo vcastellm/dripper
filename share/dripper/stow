@@ -10,7 +10,8 @@ if [ ! -z $DRIP_INSTALL ]; then
   curl -O http://ftp.gnu.org/pub/gnu/stow/$STOW.tar.gz
   tar xzf $STOW.tar.gz
   cd $STOW
-  ./configure --prefix=$PREFIX
+  ./configure \
+    --prefix=$PREFIX
   make install
   popd
   $PREFIX/bin/stow -d $STOW_PATH $STOW
