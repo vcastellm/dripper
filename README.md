@@ -59,6 +59,10 @@ Disable a `drip`:
 
     drip unlink redis-2.4.10
 
+Enable a `drip`:
+
+    drip link redis-2.4.10
+
 Update the system:
 
     drip update
@@ -83,8 +87,8 @@ to install Mercurial is by using `pip`:
 Conventions
 -----------
 
-Sources are downloaded into the `/tmp` folder and software is installed
-under `/usr/local/stow` or `$HOME/.packages/stow`.
+- Sources are downloaded into `/usr/local/src` or `$HOME/.packages/src`.
+- Packages are compiled into `/usr/local/stow` or `$HOME/.packages/stow`.
 
 
 TODO and Whishlist
