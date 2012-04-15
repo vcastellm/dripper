@@ -28,6 +28,17 @@ If you need to uninstall `dripper`:
     rm -rf $HOME/.packages
     rm -rf /usr/local
 
+If you install `drip` in single user mode add the following lines to
+your `.bashrc`:
+
+    if [ -d $HOME/.packages ]; then
+      export PATH="$HOME/.packages/bin:$PATH"
+
+      for file in $HOME/.packages/etc/bash_completion.d/*; do
+        . $file
+      done
+    fi
+
 
 Usage
 -----
