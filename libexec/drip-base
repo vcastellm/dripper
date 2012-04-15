@@ -10,5 +10,6 @@ else
 fi
 
 mkdir -p $LOCAL_PATH/stow
-mkdir -p $LOCAL_PATH/{bin,etc,share,include,lib,libexec,var,info,man}
+mkdir -p $LOCAL_PATH/{bin,etc,share,include,lib,libexec,var,info}
+mkdir -p $LOCAL_PATH/man/{man1,man2,man3,man4,man5,man6,man7,man8,man9,mann}
 mkdir -p $LOCAL_PATH/Library
