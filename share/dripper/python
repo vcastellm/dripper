@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+PACKAGE=python
+VERSION=2.7.3
+
+set_variables
+
+STOW=Python-$VERSION
+URL=http://www.python.org/ftp/python/$VERSION/$STOW.tgz
+
+if [ ! -z $DRIP_INSTALL ]; then
+  pushd $TMPDIR
+  curl -O $URL
+  tar xzf $STOW.tgz
+  cd $STOW
+  ./configure \
+    --prefix=$PREFIX
+  make
+  make install
+  popd
+
+  # Install setuptools:
+  pushd $TMPDIR
+  curl -O http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg
+  sh setuptools-0.6c11-py2.7.egg
+  popd
+
+  # Go for pip:
+  pushd $TMPDIR
+  curl -O http://pypi.python.org/packages/source/p/pip/pip-1.0.tar.gz
+  tar xzf pip-1.0.tar.gz
+  cd pip-1.0
+  $PREFIX/bin/python setup.py install
+  popd
+fi
