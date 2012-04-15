@@ -3,7 +3,7 @@ etc/
 include/
 info/
 lib/
-shared/
+share/
 src/
 stow/
 var/
