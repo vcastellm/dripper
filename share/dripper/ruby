@@ -9,7 +9,7 @@ YAML_STOW=yaml-0.1.4
 YAML_STOW_PATH=$STOW_PATH/$YAML_STOW
 
 if [ ! -z $DRIP_INSTALL ]; then
-  pushd $TMPDIR
+  pushd $SRC_PATH
   curl -O http://pyyaml.org/download/libyaml/$YAML_STOW.tar.gz
   tar xzf $YAML_STOW.tar.gz
   cd $YAML_STOW
@@ -17,7 +17,7 @@ if [ ! -z $DRIP_INSTALL ]; then
   make install
   popd
 
-  pushd $TMPDIR
+  pushd $SRC_PATH
   curl -O http://ftp.ruby-lang.org/pub/ruby/1.9/$STOW.tar.gz
   tar xzf $STOW.tar.gz
   cd $STOW

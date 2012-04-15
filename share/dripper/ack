@@ -8,7 +8,7 @@ set_variables
 if [ ! -z $DRIP_INSTALL ]; then
   mkdir -p $PREFIX/bin
 
-  pushd $TMPDIR
+  pushd $SRC_PATH
   curl -O https://nodeload.github.com/petdance/ack/tarball/$VERSION
   tar xzf $VERSION
   cd petdance-ack*

@@ -6,7 +6,7 @@ PACKAGE=stow
 set_variables
 
 if [ ! -z $DRIP_INSTALL ]; then
-  pushd $TMPDIR
+  pushd $SRC_PATH
   curl -O http://ftp.gnu.org/pub/gnu/stow/$STOW.tar.gz
   tar xzf $STOW.tar.gz
   cd $STOW

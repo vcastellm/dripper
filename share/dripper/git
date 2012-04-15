@@ -6,7 +6,7 @@ VERSION=1.7.10
 set_variables
 
 if [ ! -z $DRIP_INSTALL ]; then
-  pushd $TMPDIR
+  pushd $SRC_PATH
   curl -O http://git-core.googlecode.com/files/$STOW.tar.gz
   tar xf $STOW.tar.gz
   cd $STOW

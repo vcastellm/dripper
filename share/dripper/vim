@@ -7,7 +7,7 @@ set_variables
 
 if [ ! -z $DRIP_INSTALL ]; then
   require_hg
-  pushd $TMPDIR
+  pushd $SRC_PATH
   hg clone --updaterev $VERSION https://vim.googlecode.com/hg/ $STOW
   cd $STOW
   ./configure --prefix=$PREFIX \
