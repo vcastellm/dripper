@@ -1,8 +1,11 @@
+Library/
 bin/
 etc/
 include/
 info/
 lib/
+libexec/
+!libexec/drip*
 share/
 src/
 stow/
