@@ -12,6 +12,11 @@ if [ ! -z $DRIP_INSTALL ]; then
   exit
 fi
 
+if [ ! -z $DRIP_UNINSTALL ]; then
+  echo "=> Uninstall"
+  exit
+fi
+
 if [ ! -z $DRIP_INFO ]; then
   echo "=> Info"
   exit
