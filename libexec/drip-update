@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-if [ ! $(which git) ]; then
-  echo "Dripper needs \`git' installed on the system."
-  exit
-fi
-
 source drip-base
+source drip-helper
+
+require_git
 
 REPOSITORY=git://github.com/fesplugas/dripper.git
 
