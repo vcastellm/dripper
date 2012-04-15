@@ -88,8 +88,8 @@ TODO and Whishlist
 
 - Stow installer.
 - Package and install from url.
-- Store downloaded packages and use them instead when needed.
 - Versions of `drips`.
+- Do not download a drip if already in `$SRC_PATH`.
 
 
 Acknowledgements
