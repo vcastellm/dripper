@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PACKAGE=ctags
-[ -z $VERSION ] && VERSION='5.8'
+VERSION=5.8
 
 set_variables
 URL=http://garr.dl.sourceforge.net/project/ctags/ctags/$VERSION/$STOW.tar.gz

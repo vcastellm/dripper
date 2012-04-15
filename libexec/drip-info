@@ -10,4 +10,4 @@ source drip-validator
 source $DRIPS_PATH/$1
 
 # Drip should exit if information is shown."
-echo "No info provided."
+echo "No info provided for $STOW."
