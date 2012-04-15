@@ -6,7 +6,6 @@ info/
 lib/
 libexec/
 !libexec/drip*
-share/
 src/
 stow/
 var/
