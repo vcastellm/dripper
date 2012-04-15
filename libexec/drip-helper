@@ -7,6 +7,13 @@ darwin_only() {
   fi
 }
 
+require_hg() {
+  if [ ! $(which hg) ]; then
+    echo "Dripper needs \`hg' installed on the system."
+    exit
+  fi
+}
+
 set_variables() {
   STOW_PATH=$LOCAL_PATH/stow
   STOW=$PACKAGE-$VERSION

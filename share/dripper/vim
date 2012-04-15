@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 
-if [ ! $(which hg) ]; then
-  echo "Dripper needs \`hg' installed on the system."
-  exit
-fi
-
 PACKAGE=vim
 [ -z $VERSION ] && VERSION='v7-3-492'
 
 set_variables
 
 if [ ! -z $DRIP_INSTALL ]; then
+  require_hg
   pushd $TMPDIR
   hg clone --updaterev $VERSION https://vim.googlecode.com/hg/ $STOW
   cd $STOW
