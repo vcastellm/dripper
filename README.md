@@ -90,9 +90,7 @@ under `/usr/local/stow` or `$HOME/.packages/stow`.
 TODO and Whishlist
 ------------------
 
-- Stow installer.
 - Package and install from url.
-- Versions of `drips`.
 - Do not download a drip if already in `$SRC_PATH`.
 
 
