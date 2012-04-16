@@ -19,10 +19,6 @@ your `.bashrc`:
 
     if [ -d $HOME/.packages ]; then
       export PATH="$HOME/.packages/bin:$PATH"
-
-      for file in $HOME/.packages/etc/bash_completion.d/*; do
-        . $file
-      done
     fi
 
 Now you can instal `stow` using drip:
