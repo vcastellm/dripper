@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+DRIP_LINK=true
+
 source drip-helper
 source drip-base
 source drip-validator

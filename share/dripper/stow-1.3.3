@@ -18,3 +18,8 @@ if [ ! -z $DRIP_INSTALL ]; then
   # Skip default task!
   exit
 fi
+
+if [ ! -z $DRIP_LINK ]; then
+  $PREFIX/bin/stow -v -d $STOW_PATH $STOW
+  exit
+fi
