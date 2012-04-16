@@ -93,8 +93,6 @@ TODO and Whishlist
 - Do not download a drip if already in `$SRC_PATH`.
 - Uninstaller.
 - Detect already installed `drips`.
-- Install `stow` when install `dripper` if `stow` is not available on
-  the system.
 
 
 Acknowledgements
