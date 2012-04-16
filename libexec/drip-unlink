@@ -6,7 +6,6 @@ source drip-helper
 all=""
 if [ "$1" = "--all" ]; then
   all=1
-  # shift
 fi
 
 # drip unlink --all
@@ -29,5 +28,4 @@ fi
 # drip unlink <drip-version>
 source drip-validator
 source $DRIPS_PATH/$1
-
 drip_unlink
