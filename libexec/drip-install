@@ -8,6 +8,14 @@ require_stow $1
 source drip-base
 source drip-helper
 source drip-validator
-source $DRIPS_PATH/$1
 
-drip_link
+# If package is already compiled under the $STOW_PATH folder we can
+# re-use it, otherwise perform the typical operations provided by the
+# drip.
+
+if [ -d $STOW_PATH/$1 ]; then
+  drip link $1
+else
+  source $DRIPS_PATH/$1
+  drip_link
+fi
