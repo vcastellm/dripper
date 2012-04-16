@@ -27,10 +27,6 @@ Clone the repository and run the install script:
     cd dripper
     ./install.sh
 
-If you need to uninstall `dripper`:
-
-    rm -rf $HOME/.packages
-
 If you install `drip` in single user mode add the following lines to
 your `.bashrc`:
 
@@ -41,6 +37,14 @@ your `.bashrc`:
         . $file
       done
     fi
+
+
+Uninstall
+---------
+
+If you need to uninstall `dripper`:
+
+    rm -rf $HOME/.packages
 
 
 Usage
