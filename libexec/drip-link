@@ -3,8 +3,6 @@
 DRIP_LINK=true
 
 source drip-requirements
-require_stow $1
-
 source drip-helper
 source drip-base
 

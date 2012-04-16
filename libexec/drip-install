@@ -3,8 +3,6 @@
 DRIP_INSTALL=true
 
 source drip-requirements
-require_stow $1
-
 source drip-base
 source drip-helper
 source drip-validator
