@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-darwin_only() {
+require_darwin() {
   if (( ! uname == 'Darwin' )) ; then
     echo "Drip no only valid for Darwin."
     exit
