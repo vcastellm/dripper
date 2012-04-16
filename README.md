@@ -2,20 +2,7 @@ Dripper
 =======
 
 Dripper is a collection of scripts (drips) to install software packages
-with [stow], so before starting to drip, you need to install [stow] on
-your machine.
-
-Install [stow] on [Ubuntu] by running:
-
-    sudo apt-get install stow
-
-Install [stow] on [RedHat] based distros by running:
-
-    sudo yum install stow
-
-You can also install `stow` using `dripper`:
-
-    drip install stow-1.3.3
+with [stow], the GNU package manager.
 
 
 Install
@@ -37,6 +24,10 @@ your `.bashrc`:
         . $file
       done
     fi
+
+Now you can instal `stow` using drip:
+
+    drip install stow-1.3.3
 
 
 Uninstall
