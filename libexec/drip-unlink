@@ -2,6 +2,22 @@
 
 source drip-base
 source drip-helper
+
+all=""
+if [ "$1" = "--all" ]; then
+  all=1
+  # shift
+fi
+
+# drip unlink --all
+if [ -n "$all" ]; then
+  for stow in $STOW_PATH/*; do
+    stow -v -D -d $STOW_PATH ${stow##*/}
+  done
+  exit
+fi
+
+# drip unlink <drip-version>
 source drip-validator
 source $DRIPS_PATH/$1
 
