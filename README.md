@@ -96,6 +96,7 @@ TODO and Whishlist
 - Package and install from url.
 - Do not download a drip if already in `$SRC_PATH`.
 - Uninstaller.
+- Detect already installed `drips`.
 
 
 Acknowledgements
