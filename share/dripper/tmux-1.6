@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+PACKAGE=tmux
+VERSION=1.6
+
+set_variables
+
+if [ ! -z $DRIP_INSTALL ]; then
+  pushd $SRC_PATH
+  curl -O http://netcologne.dl.sourceforge.net/project/tmux/tmux/$STOW/$STOW.tar.gz
+  tar xvf $STOW.tar.gz
+  cd $STOW
+  ./configure \
+    --prefix=$PREFIX \
+    --disable-dependency-tracking
+  make install
+  popd
+fi
