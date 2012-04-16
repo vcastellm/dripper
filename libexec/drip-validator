@@ -6,6 +6,20 @@ if [ ! $1 ]; then
   exit 1
 fi
 
-# TODO: Verify provided drip.
+# If drip provided verify it exists on the `drips_path`.
+if [ $1 ]; then
+  if [ ! -f $DRIPS_PATH/$1 ]; then
+    message="Drip doesn't exist."
+    if [ -f $DRIPS_PATH/$1* ]; then
+      echo "$message Suggested packages:"
+      { for drip in "${DRIPS_PATH}/$1"*; do
+        echo "=> ${drip##*/}"
+      done } | sort
+      exit
+    else
+      echo $message
+    fi
 
-# TODO: Verify if drip is already installed, otherwise exit.
+    exit
+  fi
+fi
