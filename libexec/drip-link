@@ -2,8 +2,28 @@
 
 DRIP_LINK=true
 
+source drip-requirements
+require_stow $1
+
 source drip-helper
 source drip-base
+
+all=""
+if [ "$1" = "--all" ]; then
+  all=1
+fi
+
+# drip link --all
+if [ -n "$all" ]; then
+  for stow in $STOW_PATH/*; do
+    current_stow=${stow##*/}
+    stow -v -d $STOW_PATH $current_stow
+  done
+
+  exit
+fi
+
+# drip link <drip-version>
 source drip-validator
 source $DRIPS_PATH/$1
 
