@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+source drip-requirements
+require_stow $1
+
 source drip-base
 source drip-helper
 
