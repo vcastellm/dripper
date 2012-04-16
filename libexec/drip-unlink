@@ -20,8 +20,8 @@ if [ -n "$all" ]; then
     fi
   done
 
-  if [ -n $special_drip ]; then
-    stow -v -D -d $STOW_PATH $specialdrip
+  if [ -n "$special_drip" ]; then
+    stow -v -D -d $STOW_PATH $special_drip
   fi
   exit
 fi
