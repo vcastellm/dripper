@@ -30,7 +30,6 @@ Clone the repository and run the install script:
 If you need to uninstall `dripper`:
 
     rm -rf $HOME/.packages
-    rm -rf /usr/local
 
 If you install `drip` in single user mode add the following lines to
 your `.bashrc`:
@@ -96,6 +95,7 @@ TODO and Whishlist
 
 - Package and install from url.
 - Do not download a drip if already in `$SRC_PATH`.
+- Uninstaller.
 
 
 Acknowledgements
