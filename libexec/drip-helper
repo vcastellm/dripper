@@ -1,26 +1,5 @@
 #!/usr/bin/env bash
 
-darwin_only() {
-  if (( ! uname == 'Darwin' )) ; then
-    echo "Drip no only valid for Darwin."
-    exit
-  fi
-}
-
-require_hg() {
-  if [ ! $(which hg) ]; then
-    echo "Dripper needs \`hg' installed on the system."
-    exit
-  fi
-}
-
-require_git() {
-  if [ ! $(which git) ]; then
-    echo "Dripper needs \`git' installed on the system."
-    exit
-  fi
-}
-
 set_variables() {
   STOW=$PACKAGE-$VERSION
   PREFIX=$STOW_PATH/$STOW
