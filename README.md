@@ -35,7 +35,8 @@ Uninstall
 
 If you need to uninstall `dripper`:
 
-    rm -rf $HOME/.packages
+    drip unlink --all
+    rm -rf $HOME/.packages/stow
 
 
 Usage
