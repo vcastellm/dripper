@@ -12,8 +12,17 @@ fi
 # drip unlink --all
 if [ -n "$all" ]; then
   for stow in $STOW_PATH/*; do
-    stow -v -D -d $STOW_PATH ${stow##*/}
+    current_stow=${stow##*/}
+    if [ ! $current_stow = 'stow-1.3.3' ]; then
+      stow -v -D -d $STOW_PATH $current_stow
+    else
+      special_drip='stow-1.3.3'
+    fi
   done
+
+  if [ -n $special_drip ]; then
+    stow -v -D -d $STOW_PATH $specialdrip
+  fi
   exit
 fi
 
