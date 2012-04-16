@@ -2,6 +2,18 @@
 
 DRIP_INSTALL=true
 
+require_stow() {
+  if [ ! $1 = 'stow-1.3.3' ] && [ ! $(which stow) ]; then
+    echo "Dripper needs \`stow' installed on the system:"
+    echo ""
+    echo "    drip install stow-1.3.3"
+    echo ""
+    exit
+  fi
+}
+
+require_stow $1
+
 source drip-base
 source drip-helper
 source drip-validator
