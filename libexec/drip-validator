@@ -10,7 +10,9 @@ fi
 if [ $1 ]; then
   if [ ! -f $DRIPS_PATH/$1 ]; then
     message="Drip doesn't exist."
-    if [ -f $DRIPS_PATH/$1* ]; then
+    ls -1 $DRIPS_PATH/$1* > /dev/null 2>&1
+
+    if [ $? = "0" ]; then
       echo "$message Suggested packages:"
       { for drip in "${DRIPS_PATH}/$1"*; do
         echo "=> ${drip##*/}"
