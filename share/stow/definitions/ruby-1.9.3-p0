@@ -8,7 +8,7 @@ set_variables
 YAML_STOW=yaml-0.1.4
 YAML_STOW_PATH=$STOW_PATH/$YAML_STOW
 
-if [ ! -z _INSTALL ]; then
+if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   curl -O http://pyyaml.org/download/libyaml/$YAML_STOW.tar.gz
   tar xzf $YAML_STOW.tar.gz
