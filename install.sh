@@ -8,27 +8,27 @@ else
   PREFIX=$HOME/.packages
 fi
 
-BIN_PATH="${PREFIX}/bin"
-SHARE_PATH="${PREFIX}/share/dripper"
-LIBEXEC_PATH="${PREFIX}/libexec"
+BIN_PATH="$PREFIX/bin"
+SHARE_PATH="$PREFIX/share/dripper"
+LIBEXEC_PATH="$PREFIX/libexec"
 
-mkdir -p "${BIN_PATH}"
-mkdir -p "${SHARE_PATH}"
-mkdir -p "${LIBEXEC_PATH}"
+mkdir -p $BIN_PATH
+mkdir -p $SHARE_PATH
+mkdir -p $LIBEXEC_PATH
 
 for file in bin/*; do
-  cp "${file}" "${BIN_PATH}"
+  cp $file $BIN_PATH
 done
 
 for file in share/dripper/*; do
-  cp "${file}" "${SHARE_PATH}"
+  cp $file $SHARE_PATH
 done
 
 for file in libexec/*; do
-  cp "${file}" "${LIBEXEC_PATH}"
+  cp $file $LIBEXEC_PATH
 done
 
-echo "Installed dripper at ${PREFIX}"
+echo "Installed dripper at $PREFIX"
 
 if [[ ! $(which drip) ]]; then
   echo "
