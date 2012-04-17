@@ -8,7 +8,7 @@ set_variables
 LIBEVENT_STOW=libevent-2.0.18-stable
 LIBEVENT_STOW_PATH=$STOW_PATH/$LIBEVENT_STOW
 
-if [ ! -z $DRIP_INSTALL ]; then
+if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   curl -O http://cloud.github.com/downloads/libevent/libevent/$LIBEVENT_STOW.tar.gz
   tar xzf $LIBEVENT_STOW.tar.gz
@@ -29,7 +29,7 @@ if [ ! -z $DRIP_INSTALL ]; then
   popd
 fi
 
-if [ ! -z $DRIP_UNINSTALL ]; then
+if [ ! -z $_UNINSTALL ]; then
   echo "No uninstall formula provided."
   exit
 fi

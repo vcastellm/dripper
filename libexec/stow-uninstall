@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DRIP_UNINSTALL=true
+_UNINSTALL=true
 
 source stow-base
 source stow-helper

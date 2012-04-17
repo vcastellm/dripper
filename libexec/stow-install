@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DRIP_INSTALL=true
+_INSTALL=true
 
 source stow-requirements
 source stow-base

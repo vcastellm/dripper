@@ -5,7 +5,7 @@ VERSION=1.4.8
 
 set_variables
 
-if [ ! -z $DRIP_INSTALL ]; then
+if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   curl -O http://www.maxmind.com/download/geoip/api/c/$STOW.tar.gz
   tar xf $STOW.tar.gz

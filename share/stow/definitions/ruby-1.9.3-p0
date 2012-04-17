@@ -8,7 +8,7 @@ set_variables
 YAML_STOW=yaml-0.1.4
 YAML_STOW_PATH=$STOW_PATH/$YAML_STOW
 
-if [ ! -z $DRIP_INSTALL ]; then
+if [ ! -z _INSTALL ]; then
   pushd $SRC_PATH
   curl -O http://pyyaml.org/download/libyaml/$YAML_STOW.tar.gz
   tar xzf $YAML_STOW.tar.gz
@@ -38,13 +38,13 @@ if [ ! -z $DRIP_INSTALL ]; then
   popd
 fi
 
-if [ ! -z $DRIP_INFO ]; then
+if [ ! -z $_INFO ]; then
   echo "Verify Ruby has been successfully installed:"
   $PREFIX/bin/ruby -rpsych -e 'puts Psych.load("win: true")'
   exit
 fi
 
-if [ ! -z $DRIP_UNINSTALL ]; then
+if [ ! -z $_UNINSTALL ]; then
   echo "No uninstall formula provided."
   exit
 fi

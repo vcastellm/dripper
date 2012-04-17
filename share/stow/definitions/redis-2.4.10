@@ -5,7 +5,7 @@ VERSION=2.4.10
 
 set_variables
 
-if [ ! -z $DRIP_INSTALL ]; then
+if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   curl -O http://redis.googlecode.com/files/$STOW.tar.gz
   tar xzf $STOW.tar.gz

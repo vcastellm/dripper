@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DRIP_INFO=true
+_INFO=true
 
 source stow-base
 source stow-helper

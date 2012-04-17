@@ -5,7 +5,7 @@ VERSION='v7-3-492'
 
 set_variables
 
-if [ ! -z $DRIP_INSTALL ]; then
+if [ ! -z $_INSTALL ]; then
   require_hg
   pushd $SRC_PATH
   hg clone --updaterev $VERSION https://vim.googlecode.com/hg/ $STOW

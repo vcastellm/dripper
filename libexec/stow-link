@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DRIP_LINK=true
+_LINK=true
 
 source stow-requirements
 source stow-helper

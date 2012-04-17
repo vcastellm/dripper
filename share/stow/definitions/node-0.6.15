@@ -5,7 +5,7 @@ VERSION=v0.6.15
 
 set_variables
 
-if [ ! -z $DRIP_INSTALL ]; then
+if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   curl -O http://nodejs.org/dist/$VERSION/$STOW.tar.gz
   tar xvf $STOW.tar.gz

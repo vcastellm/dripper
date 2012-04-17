@@ -6,7 +6,7 @@ VERSION=5.8
 set_variables
 URL=http://garr.dl.sourceforge.net/project/ctags/ctags/$VERSION/$STOW.tar.gz
 
-if [ ! -z $DRIP_INSTALL ]; then
+if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   curl -O $URL
   tar xvf $STOW.tar.gz

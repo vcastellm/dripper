@@ -8,7 +8,7 @@ set_variables
 STOW=Python-$VERSION
 URL=http://www.python.org/ftp/python/$VERSION/$STOW.tgz
 
-if [ ! -z $DRIP_INSTALL ]; then
+if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   curl -O $URL
   tar xzf $STOW.tgz

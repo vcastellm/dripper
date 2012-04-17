@@ -5,7 +5,7 @@ VERSION=1.96
 
 set_variables
 
-if [ ! -z $DRIP_INSTALL ]; then
+if [ ! -z $_INSTALL ]; then
   mkdir -p $PREFIX/bin
 
   pushd $SRC_PATH

@@ -7,17 +7,17 @@ DEBUG=true
 echo "Package: $PACKAGE"
 echo "Version: $VERSION"
 
-if [ ! -z $DRIP_INSTALL ]; then
+if [ ! -z $_INSTALL ]; then
   echo "=> Install"
   exit
 fi
 
-if [ ! -z $DRIP_UNINSTALL ]; then
+if [ ! -z $_UNINSTALL ]; then
   echo "=> Uninstall"
   exit
 fi
 
-if [ ! -z $DRIP_INFO ]; then
+if [ ! -z $_INFO ]; then
   echo "=> Info"
   exit
 fi
