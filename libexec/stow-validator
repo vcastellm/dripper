@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-# If no drip provided, then exit.
+# If no package provided, then exit.
 if [ ! $1 ]; then
-  echo "No drip provided. Get a list with \`drip list'."
+  echo "No package provided. Get a list with \`stow list'."
   exit 1
 fi
 
-# If drip provided verify it exists on the `drips_path`.
+# If package provided verify it exists on the `drips_path`.
 if [ $1 ]; then
   if [ ! -f $DRIPS_PATH/$1 ]; then
     message="Drip doesn't exist."

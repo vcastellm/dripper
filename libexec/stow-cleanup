@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source drip-base
-source drip-helper
+source stow-base
+source stow-helper
 
 rm -rfv $SRC_PATH

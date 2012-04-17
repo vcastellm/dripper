@@ -2,9 +2,9 @@
 
 DRIP_INFO=true
 
-source drip-base
-source drip-helper
-source drip-validator
+source stow-base
+source stow-helper
+source stow-validator
 
 # Drip exists and is not installed, so go for it!
 source $DRIPS_PATH/$1

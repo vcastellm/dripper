@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-echo "usage: drip <command> [<args>]
+echo "usage: stow <command> [<args>]
 
-The most commonly used drip commands are:
+The most commonly used stow commands are:
 
    list       List available drips
    install    Install a drip
@@ -15,4 +15,4 @@ The most commonly used drip commands are:
    unlink     Unlink package
    cleanup    Remove all sources.
 
-See 'drip help <command>' for information on a specific command."
+See 'stow help <command>' for information on a specific command."

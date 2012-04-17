@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-source drip-requirements
-source drip-base
-source drip-helper
+source stow-requirements
+source stow-base
+source stow-helper
 
 set_options $*
 
-# drip unlink --all
+# stow unlink --all
 if [ -n "$all" ]; then
   for stow in $STOW_PATH/*; do
     current_stow=${stow##*/}
@@ -23,7 +23,7 @@ if [ -n "$all" ]; then
   exit
 fi
 
-# drip unlink <drip-version>
-source drip-validator
+# stow unlink <package>
+source stow-validator
 source $DRIPS_PATH/$1
 stow_unlink

@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-source drip-base
-source drip-helper
-source drip-validator
-
-cat $DRIPS_PATH/$1
