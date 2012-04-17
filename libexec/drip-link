@@ -13,8 +13,8 @@ fi
 
 # drip link --all
 if [ -n "$all" ]; then
-  for stow in $STOW_PATH/*; do
-    current_stow=${stow##*/}
+  for item in $STOW_PATH/*; do
+    current_stow=${item##*/}
     stow -v -d $STOW_PATH $current_stow
   done
 
