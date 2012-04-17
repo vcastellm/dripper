@@ -30,7 +30,11 @@ stow_link() {
 }
 
 stow_unlink() {
-  $STOW_BINARY -v -D -d $STOW_PATH $STOW
+  if [ -d $STOW_PATH/$STOW ]; then
+    $STOW_BINARY -v -D -d $STOW_PATH $STOW
+  else
+    echo "Error: $STOW is not installed."
+  fi
 }
 
 stow_remove() {
