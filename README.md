@@ -75,6 +75,26 @@ to install Mercurial is by using `pip`:
     sudo pip install mercurial
 
 
+Tips & Tricks
+-------------
+
+Imagine you have different projects with different requirements and
+want to load a different `ruby` version for each one. Familiar, right?
+
+    # Redefine `cd` to load environment variables from a `.env` file
+    # if exists.
+    function cd {
+      builtin cd "$@"
+      if [ -e ./.env ] ; then
+        source ./.env
+      fi
+    }
+
+Now edit the `.env` file of your project and the following load path:
+
+    PATH=/Users/fesplugas/.packages/stow/git-1.7.10/bin:$PATH
+
+
 Conventions
 -----------
 
