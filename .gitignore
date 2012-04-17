@@ -5,7 +5,7 @@ include/
 info/
 lib/
 libexec/
-!libexec/drip*
+!libexec/stow*
 src/
 stow/
 var/

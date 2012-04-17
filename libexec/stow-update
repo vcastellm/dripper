@@ -6,7 +6,7 @@ source stow-helper
 
 require_git
 
-REPOSITORY=git://github.com/fesplugas/dripper.git
+REPOSITORY=git://github.com/fesplugas/stow-manager.git
 
 cd $LOCAL_PATH
 
