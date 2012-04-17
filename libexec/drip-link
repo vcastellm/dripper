@@ -24,5 +24,4 @@ fi
 # drip link <drip-version>
 source drip-validator
 source $DRIPS_PATH/$1
-
 stow_link
