@@ -92,7 +92,7 @@ want to load a different `ruby` version for each one. Familiar, right?
 
 Now edit the `.env` file of your project and the following load path:
 
-    PATH=/Users/fesplugas/.packages/stow/git-1.7.10/bin:$PATH
+    PATH=/Users/fesplugas/.packages/stow/ruby-1.9.3-p125/bin:$PATH
 
 
 Conventions
