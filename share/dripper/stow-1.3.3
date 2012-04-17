@@ -11,15 +11,17 @@ if [ ! -z $DRIP_INSTALL ]; then
   tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
-    --prefix=$PREFIX
+    --prefix=$PREFIX \
+    --program-suffix=_local
+    --disable-dependency-tracking
   make install
   popd
-  $PREFIX/bin/stow -d $STOW_PATH $STOW
+  $PREFIX/bin/$STOW_BINARY -d $STOW_PATH $STOW
   # Skip default task!
   exit
 fi
 
 if [ ! -z $DRIP_LINK ]; then
-  $PREFIX/bin/stow -v -d $STOW_PATH $STOW
+  $PREFIX/bin/$STOW_BINARY -v -d $STOW_PATH $STOW
   exit
 fi

@@ -6,11 +6,11 @@ set_variables() {
 }
 
 stow_link() {
-  stow -v -d $STOW_PATH $STOW
+  $STOW_BINARY -v -d $STOW_PATH $STOW
 }
 
 stow_unlink() {
-  stow -v -D -d $STOW_PATH $STOW
+  $STOW_BINARY -v -D -d $STOW_PATH $STOW
 }
 
 stow_remove() {

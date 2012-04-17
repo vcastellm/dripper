@@ -22,7 +22,7 @@ require_git() {
 }
 
 require_stow() {
-  if [ ! $1 = 'stow-1.3.3' ] && [ ! $(which stow) ]; then
+  if [ ! $1 = 'stow-1.3.3' ] && [ ! $(which $STOW_BINARY) ]; then
     echo "Dripper needs \`stow' installed on the system:"
     echo ""
     echo "    drip install stow-1.3.3"
@@ -31,4 +31,5 @@ require_stow() {
   fi
 }
 
+STOW_BINARY='stow_local'
 require_stow $1

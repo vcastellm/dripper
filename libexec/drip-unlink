@@ -11,14 +11,14 @@ if [ -n "$all" ]; then
   for stow in $STOW_PATH/*; do
     current_stow=${stow##*/}
     if [ ! $current_stow = 'stow-1.3.3' ]; then
-      stow -v -D -d $STOW_PATH $current_stow
+      $STOW_BINARY -v -D -d $STOW_PATH $current_stow
     else
       special_drip='stow-1.3.3'
     fi
   done
 
   if [ -n "$special_drip" ]; then
-    stow -v -D -d $STOW_PATH $special_drip
+    $STOW_BINARY -v -D -d $STOW_PATH $special_drip
   fi
   exit
 fi
