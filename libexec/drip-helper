@@ -3,7 +3,6 @@
 set_variables() {
   STOW=$PACKAGE-$VERSION
   PREFIX=$STOW_PATH/$STOW
-  TMPDIR=$(mktemp -d /tmp/stows-$STOW.XXXXXXXXXX)
 }
 
 stow_link() {
