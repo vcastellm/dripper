@@ -98,6 +98,8 @@ TODO and Whishlist
 - Do not download a package if already in `$SRC_PATH`.
 - Uninstaller.
 - Detect already installed `packages`.
+- Do not override `stow` command and use a proxy. At this moment if you
+  need to use `GNU Stow` you can do it by using `stow_local`.
 
 
 Acknowledgements
