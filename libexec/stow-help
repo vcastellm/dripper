@@ -17,5 +17,6 @@ The most commonly used stow commands are:
    link       Link package
    unlink     Unlink package
    cleanup    Remove all sources.
+   path       Show package path
 
 See 'stow help <command>' for information on a specific command."
