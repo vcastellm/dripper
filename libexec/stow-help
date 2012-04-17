@@ -4,7 +4,8 @@ echo "usage: stow <command> [<args>]
 
 The most commonly used stow commands are:
 
-   list       List available definitions
+   search     Search a definition
+   list       List installed packages
    install    Install a definition
    uninstall  Uninstall a definition
    update     Update stow repository
