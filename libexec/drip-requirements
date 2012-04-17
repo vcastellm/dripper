@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 require_darwin() {
-  if (( ! uname == 'Darwin' )) ; then
-    echo "Drip no only valid for Darwin."
+  if [ ! $(uname) == 'Darwin' ]; then
+    echo "This \`drip' is only valid for Darwin."
     exit
   fi
 }
