@@ -49,5 +49,4 @@ set_options() {
   fi
 }
 
-DRIPPER_PATH="$(abs_dirname "$0")/.."
-STOW_DEFINITIONS_PATH="${DRIPPER_PATH}/share/dripper"
+STOW_DEFINITIONS_PATH="$(abs_dirname "$0")/../share/dripper"
