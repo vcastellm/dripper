@@ -3,7 +3,7 @@
 set -e
 [ ! -z $DEBUG ] && set -x
 
-if (( UID == 0 )) ; then
+if [ $(id -u) = "0" ]; then
   LOCAL_PATH=/usr/local
 else
   LOCAL_PATH=$HOME/.packages
