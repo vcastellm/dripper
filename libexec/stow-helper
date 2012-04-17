@@ -18,7 +18,7 @@ stow_remove() {
 }
 
 list_drips() {
-  { for item in "${DRIPS_PATH}/"*; do
+  { for item in "${STOW_DEFINITIONS_PATH}/"*; do
       echo "${item##*/}"
     done
   } | sort
@@ -50,4 +50,4 @@ set_options() {
 }
 
 DRIPPER_PATH="$(abs_dirname "$0")/.."
-DRIPS_PATH="${DRIPPER_PATH}/share/dripper"
+STOW_DEFINITIONS_PATH="${DRIPPER_PATH}/share/dripper"

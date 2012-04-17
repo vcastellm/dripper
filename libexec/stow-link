@@ -20,5 +20,5 @@ fi
 
 # stow link <packages>
 source stow-validator
-source $DRIPS_PATH/$1
+source $STOW_DEFINITIONS_PATH/$1
 stow_link

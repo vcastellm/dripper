@@ -7,7 +7,7 @@ source stow-helper
 source stow-validator
 
 # Drip exists and is not installed, so go for it!
-source $DRIPS_PATH/$1
+source $STOW_DEFINITIONS_PATH/$1
 
 # Drip should exit if information is shown."
 echo "No info provided for $STOW."

@@ -14,6 +14,6 @@ source stow-validator
 if [ -d $STOW_PATH/$1 ]; then
   stow link $1
 else
-  source $DRIPS_PATH/$1
+  source $STOW_DEFINITIONS_PATH/$1
   stow_link
 fi

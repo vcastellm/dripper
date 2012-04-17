@@ -3,6 +3,6 @@
 source stow-base
 source stow-helper
 source stow-validator
-source $DRIPS_PATH/$1
+source $STOW_DEFINITIONS_PATH/$1
 
 echo "PATH=$PREFIX/bin:\$PATH"
