@@ -13,7 +13,7 @@ stow_unlink() {
   stow -v -D -d $STOW_PATH $STOW
 }
 
-drip_remove() {
+stow_remove() {
   rm -rf $STOW_PATH/$STOW
 }
 

@@ -8,4 +8,4 @@ source drip-validator
 source $DRIPS_PATH/$1
 
 stow_unlink
-drip_remove
+stow_remove
