@@ -1,8 +1,8 @@
-Dripper
-=======
+Stow Manager
+============
 
-Dripper is a collection of scripts (drips) to install software packages
-with [stow], the GNU package manager.
+Stow manager is a collection of definitions to install software
+packages with [stow], the GNU package manager.
 
 
 Install
@@ -10,66 +10,55 @@ Install
 
 Clone the repository and run the install script:
 
-    git clone git://github.com/fesplugas/dripper.git
-    cd dripper
+    git clone git://github.com/fesplugas/stow-manager.git
+    cd stow-manager
     ./install.sh
 
-If you install `drip` in single user mode add the following lines to
-your `.bashrc`:
+If you install `stow-manager` in single user mode add the following
+lines to your `.bashrc`:
 
     if [ -d $HOME/.packages ]; then
       export PATH="$HOME/.packages/bin:$PATH"
     fi
 
-Now you can instal `stow` using drip:
+Now you can instal `stow` using `stow-manager`:
 
-    drip install stow-1.3.3
+    stow install stow-1.3.3
 
 
 Uninstall
 ---------
 
-If you need to uninstall `dripper`:
+If you need to uninstall `stow-manager`:
 
-    drip unlink --all
+    stow unlink --all
     rm -rf $HOME/.packages/stow
 
 
 Usage
 -----
 
-Install a `drip`:
+Common operations:
 
-    drip install redis-2.4.10
+    stow install redis-2.4.10
+    stow uninstall redis-2.4.10
+    stow unlink redis-2.4.10
+    stow link redis-2.4.10
+    stow path redis-2.4.10
+    stow update
 
-Uninstall a `drip`:
-
-    drip uninstall redis-2.4.10
-
-Disable a `drip`:
-
-    drip unlink redis-2.4.10
-
-Enable a `drip`:
-
-    drip link redis-2.4.10
-
-Update the system:
-
-    drip update
-
-You can get a list of all available commands by running `drip`.
+You can get a list of all available commands by running `stow`.
 
 
 Requirements
 ------------
 
-You'll need `git` to be able to update drips:
+You'll need `git` to be able to update `stow-manager`:
 
-    drip install git-1.7.1.0
+    stow install git-1.7.1.0
 
-Some `stows` require `hg`. At this moment the best thing you can do
-to install Mercurial is by using `pip`:
+Some `definitions` require `hg`. At this moment the best thing you can
+do to install Mercurial is by using `pip`:
 
     sudo easy_install pip
     sudo pip install mercurial
@@ -92,7 +81,7 @@ want to load a different `ruby` version for each one. Familiar, right?
 
 Now you can add a `ruby` to the load path by running:
 
-    drip path ruby-1.9.3-p125 > .env
+    stow path ruby-1.9.3-p125 > .env
 
 
 Conventions
@@ -106,9 +95,9 @@ TODO and Whishlist
 ------------------
 
 - Package and install from url.
-- Do not download a drip if already in `$SRC_PATH`.
+- Do not download a package if already in `$SRC_PATH`.
 - Uninstaller.
-- Detect already installed `drips`.
+- Detect already installed `packages`.
 
 
 Acknowledgements
@@ -116,10 +105,10 @@ Acknowledgements
 
 Thanks to [Homebrew], it's an awesome tool. As and [stow] user I
 always wanted to do something similar and [Homebrew] has inspired
-many of the commands used by `drip`.
+many of the commands used by `stow-manager`.
 
 Thanks to [ruby-build] and [rbenv], project organization has been
-heavily inspired by them. Also some "helpers" used in [drip-helper]
+heavily inspired by them. Also some "helpers" used in [stow-helper]
 have been copied from [rbenv].
 
 
@@ -129,4 +118,4 @@ have been copied from [rbenv].
 [Homebrew]: https://github.com/mxcl/homebrew
 [ruby-build]: https://github.com/sstephenson/ruby-build
 [rbenv]: https://github.com/sstephenson/rbenv
-[drip-helper]: https://github.com/fesplugas/dripper/blob/master/libexec/drip-helper
+[stow-helper]: https://github.com/fesplugas/stow-manager/blob/master/libexec/stow-helper
