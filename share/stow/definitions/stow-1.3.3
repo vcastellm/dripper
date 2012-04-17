@@ -12,7 +12,7 @@ if [ ! -z $_INSTALL ]; then
   cd $STOW
   ./configure \
     --prefix=$PREFIX \
-    --program-suffix=_local
+    --program-suffix=_local \
     --disable-dependency-tracking
   make install
   popd
