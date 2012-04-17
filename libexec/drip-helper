@@ -18,8 +18,8 @@ stow_remove() {
 }
 
 list_drips() {
-  { for drip in "${DRIPS_PATH}/"*; do
-      echo "${drip##*/}"
+  { for item in "${DRIPS_PATH}/"*; do
+      echo "${item##*/}"
     done
   } | sort
 }
