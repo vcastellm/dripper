@@ -42,5 +42,12 @@ abs_dirname() {
   cd "$cwd"
 }
 
+set_options() {
+  all=""
+  if [ "$1" = "--all" ]; then
+    all=1
+  fi
+}
+
 DRIPPER_PATH="$(abs_dirname "$0")/.."
 DRIPS_PATH="${DRIPPER_PATH}/share/dripper"

@@ -6,10 +6,7 @@ source drip-requirements
 source drip-helper
 source drip-base
 
-all=""
-if [ "$1" = "--all" ]; then
-  all=1
-fi
+set_options $*
 
 # drip link --all
 if [ -n "$all" ]; then

@@ -4,10 +4,7 @@ source drip-requirements
 source drip-base
 source drip-helper
 
-all=""
-if [ "$1" = "--all" ]; then
-  all=1
-fi
+set_options $*
 
 # drip unlink --all
 if [ -n "$all" ]; then
