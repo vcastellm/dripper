@@ -22,7 +22,11 @@ set_variables() {
 }
 
 stow_link() {
-  $STOW_BINARY -v -d $STOW_PATH $STOW
+  if [ -d $STOW_PATH/$STOW ]; then
+    $STOW_BINARY -v -d $STOW_PATH $STOW
+  else
+    echo "Error: $STOW is not installed."
+  fi
 }
 
 stow_unlink() {
