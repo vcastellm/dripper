@@ -9,7 +9,7 @@ fi
 # If package provided verify it exists on the `definitions` folder.
 if [ $1 ]; then
   if [ ! -f $STOW_DEFINITIONS_PATH/$1 ]; then
-    message="Drip doesn't exist."
+    message="Definition doesn't exist."
 
     if [ -e `echo $STOW_DEFINITIONS_PATH/$1* | cut -d " " -f1` ]; then
       echo "$message Suggested packages:"

@@ -9,21 +9,21 @@ require_darwin() {
 
 require_hg() {
   if [ ! $(which hg) ]; then
-    echo "Dripper needs \`hg' installed on the system."
+    echo "Stow manager needs \`hg' installed on the system."
     exit
   fi
 }
 
 require_git() {
   if [ ! $(which git) ]; then
-    echo "Dripper needs \`git' installed on the system."
+    echo "Stow manager needs \`git' installed on the system."
     exit
   fi
 }
 
 require_stow() {
   if [ ! $1 = 'stow-1.3.3' ] && [ ! $(which $STOW_BINARY) ]; then
-    echo "Dripper needs \`stow' installed on the system:"
+    echo "Stow manager needs \`stow' installed on the system:"
     echo ""
     echo "    stow install stow-1.3.3"
     echo ""
