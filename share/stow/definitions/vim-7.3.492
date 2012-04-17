@@ -7,8 +7,10 @@ set_variables
 
 if [ ! -z $_INSTALL ]; then
   require_hg
-  pushd $SRC_PATH
-  hg clone --updaterev $VERSION https://vim.googlecode.com/hg/ $STOW
+  pushd $SRC_PATH > /dev/null
+  if [ ! -d $STOW ]; then
+    hg clone --updaterev $VERSION https://vim.googlecode.com/hg/ $STOW
+  fi
   cd $STOW
   ./configure \
     --prefix=$PREFIX \
@@ -19,7 +21,9 @@ if [ ! -z $_INSTALL ]; then
     --with-tlib=ncurses \
     --enable-pythoninterp \
     --enable-rubyinterp \
+    --enable-cscope \
+    --with-ruby-command=/usr/bin/ruby \
     --with-features=huge
   make && make install
-  popd
+  popd > /dev/null
 fi
