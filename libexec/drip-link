@@ -25,4 +25,4 @@ fi
 source drip-validator
 source $DRIPS_PATH/$1
 
-drip_link
+stow_link

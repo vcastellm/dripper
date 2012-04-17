@@ -29,4 +29,4 @@ fi
 # drip unlink <drip-version>
 source drip-validator
 source $DRIPS_PATH/$1
-drip_unlink
+stow_unlink

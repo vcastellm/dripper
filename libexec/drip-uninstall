@@ -7,5 +7,5 @@ source drip-helper
 source drip-validator
 source $DRIPS_PATH/$1
 
-drip_unlink
+stow_unlink
 drip_remove

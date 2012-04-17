@@ -6,11 +6,11 @@ set_variables() {
   TMPDIR=$(mktemp -d /tmp/stows-$STOW.XXXXXXXXXX)
 }
 
-drip_link() {
+stow_link() {
   stow -v -d $STOW_PATH $STOW
 }
 
-drip_unlink() {
+stow_unlink() {
   stow -v -D -d $STOW_PATH $STOW
 }
 
