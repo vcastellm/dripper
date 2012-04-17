@@ -9,7 +9,7 @@ source stow-validator
 
 # If package is already compiled under the $STOW_PATH folder we can
 # re-use it, otherwise perform the typical operations provided by the
-# drip.
+# definition.
 
 if [ -d $STOW_PATH/$1 ]; then
   stow link $1
