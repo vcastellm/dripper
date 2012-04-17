@@ -90,9 +90,9 @@ want to load a different `ruby` version for each one. Familiar, right?
       fi
     }
 
-Now edit the `.env` file of your project and the following load path:
+Now you can add a `ruby` to the load path by running:
 
-    PATH=/Users/fesplugas/.packages/stow/ruby-1.9.3-p125/bin:$PATH
+    drip path ruby-1.9.3-p125 > .env
 
 
 Conventions

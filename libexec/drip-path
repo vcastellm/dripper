@@ -5,5 +5,4 @@ source drip-helper
 source drip-validator
 source $DRIPS_PATH/$1
 
-echo "Add $STOW to the load path by copying the following line:"
-echo "export PATH=$PREFIX/bin:\$PATH"
+echo "PATH=$PREFIX/bin:\$PATH"
