@@ -2,7 +2,7 @@
 
 set -e
 
-if (( UID == 0 )); then
+if [ $(id -u) = "0" ]; then
   PREFIX=/usr/local
 else
   PREFIX=$HOME/.packages
