@@ -17,7 +17,7 @@ stow_remove() {
   rm -rf $STOW_PATH/$STOW
 }
 
-list_drips() {
+list_definitions() {
   { for item in "${STOW_DEFINITIONS_PATH}/"*; do
       echo "${item##*/}"
     done
@@ -49,4 +49,4 @@ set_options() {
   fi
 }
 
-STOW_DEFINITIONS_PATH="$(abs_dirname "$0")/../share/dripper"
+STOW_DEFINITIONS_PATH="$(abs_dirname "$0")/../share/stow/definitions"

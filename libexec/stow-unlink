@@ -13,12 +13,12 @@ if [ -n "$all" ]; then
     if [ ! $current_stow = 'stow-1.3.3' ]; then
       $STOW_BINARY -v -D -d $STOW_PATH $current_stow
     else
-      special_drip='stow-1.3.3'
+      special_definition='stow-1.3.3'
     fi
   done
 
-  if [ -n "$special_drip" ]; then
-    $STOW_BINARY -v -D -d $STOW_PATH $special_drip
+  if [ -n "$special_definition" ]; then
+    $STOW_BINARY -v -D -d $STOW_PATH $special_definition
   fi
   exit
 fi

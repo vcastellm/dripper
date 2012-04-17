@@ -33,7 +33,7 @@ case "$command" in
   echo -e "$(stow-help)" >&2
   ;;
 * )
-  command_path="$(command -v "drip-$command" || true)"
+  command_path="$(command -v "stow-$command" || true)"
   if [ -z "$command_path" ]; then
     echo "stow: no such command \`$command'" >&2
     exit 1

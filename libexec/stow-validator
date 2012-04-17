@@ -6,15 +6,15 @@ if [ ! $1 ]; then
   exit 1
 fi
 
-# If package provided verify it exists on the `drips_path`.
+# If package provided verify it exists on the `definitions` folder.
 if [ $1 ]; then
   if [ ! -f $STOW_DEFINITIONS_PATH/$1 ]; then
     message="Drip doesn't exist."
 
     if [ -e `echo $STOW_DEFINITIONS_PATH/$1* | cut -d " " -f1` ]; then
       echo "$message Suggested packages:"
-      { for drip in "${STOW_DEFINITIONS_PATH}/$1"*; do
-        echo "=> ${drip##*/}"
+      { for item in "${STOW_DEFINITIONS_PATH}/$1"*; do
+        echo "=> ${item##*/}"
       done } | sort
       exit
     else
