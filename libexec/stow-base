@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-[ ! -z $DEBUG ] && set -x
-
 if [ $(id -u) = "0" ]; then
   LOCAL_PATH=/usr/local
 else
