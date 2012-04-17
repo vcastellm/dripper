@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source stow-base
+
 echo "usage: stow <command> [<args>]
 
 The most commonly used stow commands are:
