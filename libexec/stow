@@ -30,12 +30,12 @@ export PATH="${libexec_path}:${bin_path}:${PATH}"
 command="$1"
 case "$command" in
 "" | "-h" | "--help" )
-  echo -e "$(drip-help)" >&2
+  echo -e "$(stow-help)" >&2
   ;;
 * )
   command_path="$(command -v "drip-$command" || true)"
   if [ -z "$command_path" ]; then
-    echo "drip: no such command \`$command'" >&2
+    echo "stow: no such command \`$command'" >&2
     exit 1
   fi
 
