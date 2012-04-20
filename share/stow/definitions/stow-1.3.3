@@ -16,6 +16,11 @@ if [ ! -z $_INSTALL ]; then
     --disable-dependency-tracking
   make install
   popd
+
+  # FIXME: Force the removal of the man folder because for some weird
+  #       reason raises an error. Needs investigation.
+  rm -rf $PREFIX/man
+
   $PREFIX/bin/$STOW_BINARY -d $STOW_PATH $STOW
   # Skip default task!
   exit
