@@ -8,3 +8,5 @@ list_definitions() {
     done
   } | sort
 }
+
+list_definitions
