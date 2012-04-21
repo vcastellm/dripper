@@ -5,5 +5,5 @@ include/
 info/
 lib/
 src/
-stow/
+/stow/
 var/
