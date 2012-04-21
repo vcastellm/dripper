@@ -21,7 +21,7 @@ require_git() {
     echo ""
     echo "    drip install git-1.7.10"
     echo ""
-    exit
+    exit 1
   fi
 }
 
