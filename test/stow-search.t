@@ -18,3 +18,9 @@ Search should return a list of available definitions:
   stow-1.3.3
   tmux-1.6
   vim-7.3.492
+
+Search should return a message when no definitions found:
+
+  $ STOW_DEFINITIONS_PATH=$TESTDIR/tmp $TESTDIR/../bin/stow search
+  No definitions found.
+  [1]

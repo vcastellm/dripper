@@ -2,11 +2,17 @@
 
 source stow-base
 
+PACKAGES=$(ls ${STOW_DEFINITIONS_PATH})
+
 list_definitions() {
-  { for item in "${STOW_DEFINITIONS_PATH}/"*; do
-      echo "${item##*/}"
-    done
-  } | sort
+  for item in ${PACKAGES}; do
+    echo "${item##*/}"
+  done
 }
 
-list_definitions
+if [ -n "${PACKAGES}" ]; then
+  list_definitions
+else
+  echo "No definitions found."
+  exit 1
+fi
