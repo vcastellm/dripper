@@ -5,7 +5,7 @@ source drip-base
 PACKAGES=$(ls -xt ${STOW_PATH})
 
 list_stows() {
-  for item in ${PACKAGES}; do
+  for item in $PACKAGES; do
     current_item=${item##*/}
     if [ -f ${STOW_PATH}/.${current_item} ]; then
       echo $current_item

@@ -16,7 +16,7 @@ else
 fi
 
 list_definitions() {
-  for item in ${PACKAGES}; do
+  for item in $PACKAGES; do
     echo "${item##*/}"
   done
 }
