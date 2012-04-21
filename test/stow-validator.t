@@ -9,3 +9,4 @@ When package is provided but not version added:
   $ $TESTDIR/../bin/stow install git
   No available definition for git. Suggested packages:
   => git-1.7.10
+  [1]

@@ -19,7 +19,6 @@ if [ ! -f $STOW_DEFINITIONS_PATH/$1 ]; then
     { for item in "${STOW_DEFINITIONS_PATH}/$1"*; do
       echo "=> ${item##*/}"
     done } | sort
-    exit
   else
     echo $message
   fi
