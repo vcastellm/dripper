@@ -16,6 +16,8 @@ if [ -n "$all" ]; then
     fi
   done
 
+  # Last package we want to remove is `stow` otherwise we would be
+  # unable to run `stow` to unlink packages.
   if [ -n "$special_definition" ]; then
     $STOW_BINARY -v -D -d $STOW_PATH $special_definition
   fi
