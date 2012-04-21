@@ -6,5 +6,10 @@ source stow-base
 source stow-validator
 source $STOW_DEFINITIONS_PATH/$1
 
+stow_remove() {
+  echo "Removing package files ..."
+  rm -rf $STOW_PATH/$STOW
+}
+
 stow_unlink
 stow_remove

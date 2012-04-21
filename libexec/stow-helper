@@ -51,11 +51,6 @@ stow_unlink() {
   fi
 }
 
-stow_remove() {
-  echo "Removing package files ..."
-  rm -rf $STOW_PATH/$STOW
-}
-
 resolve_link() {
   $(type -p greadlink readlink | head -1) "$1"
 }
