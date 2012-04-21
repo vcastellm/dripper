@@ -16,9 +16,10 @@ if [ ! -f $STOW_DEFINITIONS_PATH/$1 ]; then
 
   if [ -e `echo $STOW_DEFINITIONS_PATH/$1* | cut -d " " -f1` ]; then
     echo "$message Suggested packages:"
-    { for item in "${STOW_DEFINITIONS_PATH}/$1"*; do
+    PACKAGES=$(ls ${STOW_DEFINITIONS_PATH}/${1}*)
+    for item in $PACKAGES; do
       echo "=> ${item##*/}"
-    done } | sort
+    done
   else
     echo $message
   fi
