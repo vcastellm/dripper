@@ -2,4 +2,11 @@
 
 source stow-base
 
+list_stows() {
+  { for item in "${STOW_PATH}/"*; do
+      echo "${item##*/}"
+    done
+  } | sort
+}
+
 list_stows

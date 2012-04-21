@@ -51,13 +51,6 @@ list_definitions() {
   } | sort
 }
 
-list_stows() {
-  { for item in "${STOW_PATH}/"*; do
-      echo "${item##*/}"
-    done
-  } | sort
-}
-
 resolve_link() {
   $(type -p greadlink readlink | head -1) "$1"
 }
