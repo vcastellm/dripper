@@ -39,6 +39,14 @@ Search should allow search by partial name:
 
 Search should return a message when no definitions found:
 
+  $ rm -rf $TESTDIR/tmp
+  $ mkdir -p $TESTDIR/tmp
   $ STOW_DEFINITIONS_PATH=$TESTDIR/tmp $TESTDIR/../bin/drip search
   No definitions found.
+  [1]
+
+Search should return an error when STOW_DEFINITIONS_PATH not found:
+
+  $ STOW_DEFINITIONS_PATH=$TESTDIR/unexisting $TESTDIR/../bin/drip search
+  Provided STOW_DEFINITIONS_PATH does not exist.
   [1]
