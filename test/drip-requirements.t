@@ -20,3 +20,13 @@ Validate the requirement of `hg` in some definitions:
   $ $TESTDIR/../bin/drip install vim-7.3.492
   Dripper needs `hg' installed on the system.
   [1]
+
+Validates the requirement of `stow` in all definitions:
+
+  $ PATH="/usr/bin:/bin"
+  $ $TESTDIR/../bin/drip install vim-7.3.492
+  Dripper needs `stow' installed on the system.
+  
+      drip install stow-1.3.3
+  
+  [1]
