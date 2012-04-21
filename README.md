@@ -22,15 +22,6 @@ lines to your `.bashrc`:
     fi
 
 
-Uninstall
----------
-
-If you need to uninstall **Dripper**:
-
-    dripper unlink --all
-    dripper cleanup
-
-
 Usage
 -----
 
@@ -88,7 +79,7 @@ TODO and Whishlist
 
 - Package and install from url.
 - Do not download a package if already in `$SRC_PATH`.
-- Uninstaller.
+- `drip uninstall`: `drip unlink --all` && `drip cleanup`.
 - Detect already installed `packages`.
 - Do not allow to link the same package with different versions.
 
