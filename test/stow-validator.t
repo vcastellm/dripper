@@ -6,7 +6,8 @@ If no package is provided on install:
 
 When package is provided but not version added:
 
-  $ $TESTDIR/../bin/stow install git
-  No available definition for git. Suggested packages:
-  => git-1.7.10
+  $ $TESTDIR/../bin/stow install ruby
+  No available definition for ruby. Suggested packages:
+  => ruby-1.9.3-p0
+  => ruby-1.9.3-p125
   [1]
