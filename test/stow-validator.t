@@ -10,4 +10,5 @@ When package is provided but not version added:
   No available definition for ruby. Suggested packages:
   => ruby-1.9.3-p0
   => ruby-1.9.3-p125
+  => ruby-1.9.3-p194
   [1]

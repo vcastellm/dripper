@@ -14,6 +14,7 @@ Search should return a list of available definitions:
   redis-2.4.10
   ruby-1.9.3-p0
   ruby-1.9.3-p125
+  ruby-1.9.3-p194
   sphinx-2.0.4
   stow-1.3.3
   tmux-1.6
