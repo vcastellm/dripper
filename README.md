@@ -91,14 +91,6 @@ Conventions
 - Packages are compiled into `/usr/local/stow` or `$HOME/.packages/stow`.
 
 
-Test
-----
-
-Run tests with:
-
-    script/test
-
-
 TODO and Whishlist
 ------------------
 
