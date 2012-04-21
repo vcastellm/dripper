@@ -13,7 +13,7 @@ if [ ! -d .git ]; then
   git remote add origin $REPOSITORY
   git fetch origin
   git reset --hard origin/master
-else 
+else
   git pull --rebase origin refs/heads/master:refs/remotes/origin/master
   git checkout master
 fi
