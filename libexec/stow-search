@@ -2,4 +2,9 @@
 
 source stow-base
 
-list_definitions
+list_definitions() {
+  { for item in "${STOW_DEFINITIONS_PATH}/"*; do
+      echo "${item##*/}"
+    done
+  } | sort
+}

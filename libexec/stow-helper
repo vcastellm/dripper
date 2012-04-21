@@ -56,13 +56,6 @@ stow_remove() {
   rm -rf $STOW_PATH/$STOW
 }
 
-list_definitions() {
-  { for item in "${STOW_DEFINITIONS_PATH}/"*; do
-      echo "${item##*/}"
-    done
-  } | sort
-}
-
 resolve_link() {
   $(type -p greadlink readlink | head -1) "$1"
 }
