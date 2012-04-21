@@ -8,8 +8,6 @@ else
   DRIPPER_ROOT=$HOME/.packages
 fi
 
-CMD='drip'
-
 SRC_PATH=$DRIPPER_ROOT/src
 mkdir -p $SRC_PATH
 

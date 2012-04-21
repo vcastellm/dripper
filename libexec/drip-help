@@ -2,9 +2,9 @@
 
 source drip-base
 
-echo "usage: $CMD <command> [<args>]
+echo "usage: drip <command> [<args>]
 
-The most commonly used $CMD commands are:
+The most commonly used drip commands are:
 
    search     Search a definition
    list       List installed packages
@@ -18,4 +18,4 @@ The most commonly used $CMD commands are:
    cleanup    Remove all sources
    path       Show package path
 
-See '$CMD help <command>' for information on a specific command."
+See 'drip help <command>' for information on a specific command."
