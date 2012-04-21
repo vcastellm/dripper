@@ -2,16 +2,16 @@
 
 _INSTALL=true
 
-source stow-requirements
-source stow-base
-source stow-validator
+source drip-requirements
+source drip-base
+source drip-validator
 
 # If package is already compiled under the $STOW_PATH folder we can
 # re-use it, otherwise perform the typical operations provided by the
 # definition.
 
 if [ -d $STOW_PATH/$1 ]; then
-  stow link $1
+  drip link $1
 else
   source $STOW_DEFINITIONS_PATH/$1
   stow_link

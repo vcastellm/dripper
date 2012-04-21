@@ -9,7 +9,7 @@ else
 fi
 
 BIN_PATH="$PREFIX/bin"
-SHARE_PATH="$PREFIX/share/stow/definitions"
+SHARE_PATH="$PREFIX/share/dripper/definitions"
 LIBEXEC_PATH="$PREFIX/libexec"
 
 mkdir -p $BIN_PATH
@@ -20,7 +20,7 @@ for file in bin/*; do
   cp $file $BIN_PATH
 done
 
-for file in share/stow/definitions/*; do
+for file in share/dripper/definitions/*; do
   cp $file $SHARE_PATH
 done
 
@@ -28,9 +28,9 @@ for file in libexec/*; do
   cp $file $LIBEXEC_PATH
 done
 
-echo "Installed stow at $PREFIX"
+echo "Installed dripper at $PREFIX"
 
-if [[ ! $(which stow) ]]; then
+if [[ ! $(which drip) ]]; then
   echo "
 Seems you still have not added '.packages' to the load path:
 

@@ -3,7 +3,7 @@
 set -e
 [ -n "$DEBUG" ] && set -x
 
-CMD='stow'
+CMD='drip'
 VERSION='0.0.1'
 
 resolve_link() {

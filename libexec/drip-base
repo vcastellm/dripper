@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source stow-helper
+source drip-helper
 
 if [ $(id -u) = "0" ]; then
   LOCAL_PATH=/usr/local
@@ -8,7 +8,7 @@ else
   LOCAL_PATH=$HOME/.packages
 fi
 
-CMD='stow'
+CMD='drip'
 
 SRC_PATH=$LOCAL_PATH/src
 mkdir -p $SRC_PATH
@@ -30,8 +30,8 @@ mkdir -p $LOCAL_PATH/share/man/{man1,man2,man3,man4,man5,man6,man7,man8,man9,man
 # If STOW_DEFINITIONS_PATH not defined we add a default. We want to
 # allow other developers to use their own definitions.
 if [ ! -n "${STOW_DEFINITIONS_PATH}" ]; then
-  STOW_DEFINITIONS_PATH="$(abs_dirname "$0")/../share/stow/definitions"
+  STOW_DEFINITIONS_PATH="$(abs_dirname "$0")/../share/dripper/definitions"
 fi
 
 # Set repository location:
-REPOSITORY=git://github.com/fesplugas/stow-manager.git
+REPOSITORY=git://github.com/fesplugas/dripper.git

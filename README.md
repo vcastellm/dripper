@@ -1,8 +1,8 @@
-Stow Manager
-============
+Dripper
+=======
 
-Stow manager is a collection of definitions to install software
-packages with [stow], the GNU package manager.
+**Dripper** is a collection of definitions to install software packages
+with [stow], the GNU package manager.
 
 
 Install
@@ -10,29 +10,25 @@ Install
 
 Clone the repository and run the install script:
 
-    git clone git://github.com/fesplugas/stow-manager.git
-    cd stow-manager
+    git clone git://github.com/fesplugas/dripper.git
+    cd dripper
     ./install.sh
 
-If you install `stow-manager` in single user mode add the following
+If you install **Dripper** in single user mode add the following
 lines to your `.bashrc`:
 
     if [ -d $HOME/.packages ]; then
       export PATH="$HOME/.packages/bin:$PATH"
     fi
 
-Now you can instal `stow` using `stow-manager`:
-
-    stow install stow-1.3.3
-
 
 Uninstall
 ---------
 
-If you need to uninstall `stow-manager`:
+If you need to uninstall **Dripper**:
 
-    stow unlink --all
-    rm -rf $HOME/.packages/stow
+    dripper unlink --all
+    dripper cleanup
 
 
 Usage
@@ -40,22 +36,22 @@ Usage
 
 Common operations:
 
-    stow install redis-2.4.10
-    stow uninstall redis-2.4.10
-    stow unlink redis-2.4.10
-    stow link redis-2.4.10
-    stow path redis-2.4.10
-    stow update
+    drip install redis-2.4.10
+    drip uninstall redis-2.4.10
+    drip unlink redis-2.4.10
+    drip link redis-2.4.10
+    drip path redis-2.4.10
+    drip update
 
-You can get a list of all available commands by running `stow`.
+You can get a list of all available commands by running `drip`.
 
 
 Requirements
 ------------
 
-You'll need `git` to be able to update `stow-manager`:
+You'll need `git` to be able to update **Dripper**:
 
-    stow install git-1.7.1.0
+    drip install git-1.7.1.0
 
 Some `definitions` require `hg`. At this moment the best thing you can
 do to install Mercurial is by using `pip`:
@@ -81,7 +77,7 @@ want to load a different `ruby` version for each one. Familiar, right?
 
 Now you can add a `ruby` to the load path by running:
 
-    stow path ruby-1.9.3-p125 > .env
+    drip path ruby-1.9.3-p125 > .env
 
 
 Conventions
@@ -98,8 +94,6 @@ TODO and Whishlist
 - Do not download a package if already in `$SRC_PATH`.
 - Uninstaller.
 - Detect already installed `packages`.
-- Do not override `stow` command and use a proxy. At this moment if you
-  need to use `GNU Stow` you can do it by using `stow_local`.
 - Do not allow to link the same package with different versions.
 
 
@@ -108,10 +102,10 @@ Acknowledgements
 
 Thanks to [Homebrew], it's an awesome tool. As and [stow] user I
 always wanted to do something similar and [Homebrew] has inspired
-many of the commands used by `stow-manager`.
+many of the commands used by **Dripper**.
 
 Thanks to [ruby-build] and [rbenv], project organization has been
-heavily inspired by them. Also some "helpers" used in [stow-helper]
+heavily inspired by them. Also some "helpers" used in [drip-helper]
 have been copied from [rbenv].
 
 
@@ -121,4 +115,4 @@ have been copied from [rbenv].
 [Homebrew]: https://github.com/mxcl/homebrew
 [ruby-build]: https://github.com/sstephenson/ruby-build
 [rbenv]: https://github.com/sstephenson/rbenv
-[stow-helper]: https://github.com/fesplugas/stow-manager/blob/master/libexec/stow-helper
+[drip-helper]: https://github.com/fesplugas/dripper/blob/master/libexec/drip-helper

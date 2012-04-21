@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-source stow-base
-source stow-validator
+source drip-base
+source drip-validator
 source $STOW_DEFINITIONS_PATH/$1
 
 echo "PATH=$PREFIX/bin:\$PATH"

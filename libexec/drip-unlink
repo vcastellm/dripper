@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-source stow-requirements
-source stow-base
+source drip-requirements
+source drip-base
 
 set_options $*
 
-# stow unlink --all
+# drip unlink --all
 if [ -n "$all" ]; then
   for stow in $STOW_PATH/*; do
     current_stow=${stow##*/}
@@ -24,7 +24,7 @@ if [ -n "$all" ]; then
   exit
 fi
 
-# stow unlink <package>
-source stow-validator
+# drip unlink <package>
+source drip-validator
 source $STOW_DEFINITIONS_PATH/$1
 stow_unlink

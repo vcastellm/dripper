@@ -1,6 +1,6 @@
 Search should return a list of available definitions:
 
-  $ $TESTDIR/../bin/stow search
+  $ $TESTDIR/../bin/drip search
   ack-1.96
   ctags-5.8
   example-0.0.0
@@ -22,14 +22,14 @@ Search should return a list of available definitions:
 
 Search should allow filtering:
 
-  $ $TESTDIR/../bin/stow search ruby
+  $ $TESTDIR/../bin/drip search ruby
   ruby-1.9.3-p0
   ruby-1.9.3-p125
   ruby-1.9.3-p194
 
 Search should allow search by partial name:
 
-  $ $TESTDIR/../bin/stow search t
+  $ $TESTDIR/../bin/drip search t
   ctags-5.8
   git-1.7.10
   mutt-1.5.21
@@ -39,6 +39,6 @@ Search should allow search by partial name:
 
 Search should return a message when no definitions found:
 
-  $ STOW_DEFINITIONS_PATH=$TESTDIR/tmp $TESTDIR/../bin/stow search
+  $ STOW_DEFINITIONS_PATH=$TESTDIR/tmp $TESTDIR/../bin/drip search
   No definitions found.
   [1]

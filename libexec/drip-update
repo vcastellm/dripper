@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-source stow-requirements
-source stow-base
+source drip-requirements
+source drip-base
 
 require_git
 

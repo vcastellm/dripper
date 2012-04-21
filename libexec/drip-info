@@ -2,8 +2,8 @@
 
 _INFO=true
 
-source stow-base
-source stow-validator
+source drip-base
+source drip-validator
 
 # Definition exists and is not installed, so go for it!
 source $STOW_DEFINITIONS_PATH/$1

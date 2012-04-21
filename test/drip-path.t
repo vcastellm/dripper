@@ -1,6 +1,6 @@
 Get `path` of package has a validator:
 
-  $ $TESTDIR/../bin/stow path ruby
+  $ $TESTDIR/../bin/drip path ruby
   No available definition for ruby. Suggested packages:
   => ruby-1.9.3-p0
   => ruby-1.9.3-p125
@@ -9,5 +9,5 @@ Get `path` of package has a validator:
 
 Get `path` of package:
 
-  $ $TESTDIR/../bin/stow path ruby-1.9.3-p0
+  $ $TESTDIR/../bin/drip path ruby-1.9.3-p0
   PATH=/Users/fesplugas/.packages/stow/ruby-1.9.3-p0/bin:$PATH

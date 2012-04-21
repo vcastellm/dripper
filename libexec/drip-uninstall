@@ -2,8 +2,8 @@
 
 _UNINSTALL=true
 
-source stow-base
-source stow-validator
+source drip-base
+source drip-validator
 source $STOW_DEFINITIONS_PATH/$1
 
 stow_remove() {

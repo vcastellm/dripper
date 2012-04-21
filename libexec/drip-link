@@ -2,12 +2,12 @@
 
 _LINK=true
 
-source stow-requirements
-source stow-base
+source drip-requirements
+source drip-base
 
 set_options $*
 
-# stow link --all
+# drip link --all
 if [ -n "$all" ]; then
   for item in $STOW_PATH/*; do
     current_stow=${item##*/}
@@ -17,7 +17,7 @@ if [ -n "$all" ]; then
   exit
 fi
 
-# stow link <packages>
-source stow-validator
+# drip link <packages>
+source drip-validator
 source $STOW_DEFINITIONS_PATH/$1
 stow_link

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-source stow-base
+source drip-base
 
 rm -rfv $SRC_PATH

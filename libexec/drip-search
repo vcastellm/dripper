@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source stow-base
+source drip-base
 
 if [ $1 ]; then
   PACKAGES=$(ls ${STOW_DEFINITIONS_PATH}/*$1*)
