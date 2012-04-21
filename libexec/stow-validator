@@ -1,26 +1,28 @@
 #!/usr/bin/env bash
 
-# If no package provided, then exit.
+# If no package provided, then exit with an error.
 if [ ! $1 ]; then
   echo "This command requires a definition argument."
   exit 1
 fi
 
-# If package provided verify it exists on the `definitions` folder.
-if [ $1 ]; then
-  if [ ! -f $STOW_DEFINITIONS_PATH/$1 ]; then
-    message="No available definition for $1."
+# If package provided verify it exists on the `definitions` otherwise
+# suggest a package with similar name.
+#
+# Exit command with an error because we could not perform the action
+# the user wanted.
+if [ ! -f $STOW_DEFINITIONS_PATH/$1 ]; then
+  message="No available definition for $1."
 
-    if [ -e `echo $STOW_DEFINITIONS_PATH/$1* | cut -d " " -f1` ]; then
-      echo "$message Suggested packages:"
-      { for item in "${STOW_DEFINITIONS_PATH}/$1"*; do
-        echo "=> ${item##*/}"
-      done } | sort
-      exit
-    else
-      echo $message
-    fi
-
+  if [ -e `echo $STOW_DEFINITIONS_PATH/$1* | cut -d " " -f1` ]; then
+    echo "$message Suggested packages:"
+    { for item in "${STOW_DEFINITIONS_PATH}/$1"*; do
+      echo "=> ${item##*/}"
+    done } | sort
     exit
+  else
+    echo $message
   fi
+
+  exit 1
 fi
