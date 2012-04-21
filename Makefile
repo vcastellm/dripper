@@ -1,7 +1,7 @@
 .PHONY: all test clean
 
 test:
-	script/test
+	@script/test
 
 help:
 	@echo "usage: make <command>"
