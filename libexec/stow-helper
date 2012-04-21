@@ -26,6 +26,7 @@ stow_link() {
     $STOW_BINARY -v -d $STOW_PATH $STOW
   else
     echo "Error: $STOW is not installed."
+    exit 1
   fi
 }
 
