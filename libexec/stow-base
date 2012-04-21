@@ -11,9 +11,9 @@ fi
 CMD='stow'
 
 SRC_PATH=$LOCAL_PATH/src
-STOW_PATH=$LOCAL_PATH/stow
-
 mkdir -p $SRC_PATH
+
+STOW_PATH=$LOCAL_PATH/stow
 mkdir -p $STOW_PATH
 
 mkdir -p $LOCAL_PATH/{bin,include,lib,libexec,var,info}
