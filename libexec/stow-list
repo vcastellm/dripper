@@ -2,14 +2,20 @@
 
 source stow-base
 
+PACKAGES=$(ls -xt ${STOW_PATH})
+
 list_stows() {
-  { for item in "${STOW_PATH}/"*; do
-      current_item=${item##*/}
-      if [ -f ${STOW_PATH}/.${current_item} ]; then
-        echo $current_item
-      fi
-    done
-  } | sort
+  for item in ${PACKAGES}; do
+    current_item=${item##*/}
+    if [ -f ${STOW_PATH}/.${current_item} ]; then
+      echo $current_item
+    fi
+  done
 }
 
-list_stows
+if [ -n "${PACKAGES}" ]; then
+  list_stows
+else
+  echo "No linked packages found."
+  exit 1
+fi

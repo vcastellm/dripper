@@ -13,7 +13,10 @@ CMD='stow'
 SRC_PATH=$LOCAL_PATH/src
 mkdir -p $SRC_PATH
 
-STOW_PATH=$LOCAL_PATH/stow
+# We should be able to set a custom $STOW_PATH!
+if [ ! -n "${STOW_PATH}" ]; then
+  STOW_PATH=$LOCAL_PATH/stow
+fi
 mkdir -p $STOW_PATH
 
 mkdir -p $LOCAL_PATH/{bin,include,lib,libexec,var,info}
