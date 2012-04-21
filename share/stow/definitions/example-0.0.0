@@ -7,6 +7,8 @@ DEBUG=true
 echo "Package: $PACKAGE"
 echo "Version: $VERSION"
 
+set_variables
+
 if [ ! -z $_INSTALL ]; then
   echo "=> Install"
   exit
