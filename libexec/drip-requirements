@@ -27,11 +27,16 @@ require_git() {
 
 # TODO: `drip install stow` should detect latest version.
 require_stow() {
-  if [ ! $(which stow) ]; then
+  if [ ! $1 = 'stow-1.3.3' ] && [ ! $(which stow) ]; then
     echo "Dripper needs \`stow' installed on the system."
     echo ""
     echo "    drip install stow-1.3.3"
     echo ""
+    exit 1
+  fi
+
+  if [ ! -z "$DRIPPER_DEBUG" ]; then
+    echo "Skip install of stow because we are in debug mode."
     exit 1
   fi
 }
