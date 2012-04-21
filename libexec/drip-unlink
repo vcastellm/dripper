@@ -7,8 +7,8 @@ set_options $*
 
 # drip unlink --all
 if [ -n "$all" ]; then
-  for stow in $STOW_PATH/*; do
-    current_stow=${stow##*/}
+  for item in $STOW_PATH/*; do
+    current_stow=${item##*/}
     if [ ! $current_stow = 'stow-1.3.3' ]; then
       stow -v -D -d $STOW_PATH $current_stow
     else
