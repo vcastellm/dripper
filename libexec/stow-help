@@ -2,7 +2,7 @@
 
 source stow-base
 
-echo "usage: stow <command> [<args>]
+echo "usage: $CMD <command> [<args>]
 
 The most commonly used stow commands are:
 
@@ -19,4 +19,4 @@ The most commonly used stow commands are:
    cleanup    Remove all sources
    path       Show package path
 
-See 'stow help <command>' for information on a specific command."
+See '$CMD help <command>' for information on a specific command."

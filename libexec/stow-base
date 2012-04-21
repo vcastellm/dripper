@@ -6,6 +6,8 @@ else
   LOCAL_PATH=$HOME/.packages
 fi
 
+CMD='stow'
+
 SRC_PATH=$LOCAL_PATH/src
 STOW_PATH=$LOCAL_PATH/stow
 
