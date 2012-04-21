@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ -z $(which cram) ]; then
+  echo "Cram not installed. Install with \`pip install cram'."
+  exit 1
+fi
+
+for file in test/*.t; do
+  cram -v $file
+done
