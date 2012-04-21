@@ -22,8 +22,14 @@ set_variables() {
 }
 
 stow_link() {
+  if [ -f $STOW_PATH/.${STOW} ]; then
+    echo "$STOW already linked."
+    exit 0
+  fi
+
   if [ -d $STOW_PATH/$STOW ]; then
     $STOW_BINARY -v -d $STOW_PATH $STOW
+    touch $STOW_PATH/.${STOW}
   else
     echo "Error: $STOW is not installed."
     exit 1

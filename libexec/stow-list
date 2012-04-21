@@ -4,7 +4,10 @@ source stow-base
 
 list_stows() {
   { for item in "${STOW_PATH}/"*; do
-      echo "${item##*/}"
+      current_item=${item##*/}
+      if [ -f ${STOW_PATH}/.${current_item} ]; then
+        echo $current_item
+      fi
     done
   } | sort
 }
