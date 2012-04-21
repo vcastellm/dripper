@@ -10,7 +10,7 @@ require_darwin() {
 require_hg() {
   if [ ! $(which hg) ]; then
     echo "Dripper needs \`hg' installed on the system."
-    exit
+    exit 1
   fi
 }
 
