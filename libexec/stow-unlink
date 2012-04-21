@@ -2,7 +2,6 @@
 
 source stow-requirements
 source stow-base
-source stow-helper
 
 set_options $*
 

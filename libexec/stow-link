@@ -3,7 +3,6 @@
 _LINK=true
 
 source stow-requirements
-source stow-helper
 source stow-base
 
 set_options $*

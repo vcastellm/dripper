@@ -4,7 +4,6 @@ _INSTALL=true
 
 source stow-requirements
 source stow-base
-source stow-helper
 source stow-validator
 
 # If package is already compiled under the $STOW_PATH folder we can

@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
 source stow-base
-source stow-helper
 
 rm -rfv $SRC_PATH

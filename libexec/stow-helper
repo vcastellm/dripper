@@ -82,12 +82,3 @@ set_options() {
     all=1
   fi
 }
-
-if [ $(id -u) = "0" ]; then
-  LOCAL_PATH=/usr/local
-else
-  LOCAL_PATH=$HOME/.packages
-fi
-
-STOW_PATH=$LOCAL_PATH/stow
-STOW_DEFINITIONS_PATH="$(abs_dirname "$0")/../share/stow/definitions"

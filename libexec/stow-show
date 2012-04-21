@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 source stow-base
-source stow-helper
 source stow-validator
 
 cat $STOW_DEFINITIONS_PATH/$1
