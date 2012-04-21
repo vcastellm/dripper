@@ -3,14 +3,14 @@
 set -e
 
 if [ $(id -u) = "0" ]; then
-  PREFIX=/usr/local
+  DRIPPER_ROOT=/usr/local
 else
-  PREFIX=$HOME/.packages
+  DRIPPER_ROOT=$HOME/.packages
 fi
 
-BIN_PATH="$PREFIX/bin"
-SHARE_PATH="$PREFIX/share/dripper/definitions"
-LIBEXEC_PATH="$PREFIX/libexec"
+BIN_PATH="$DRIPPER_ROOT/bin"
+SHARE_PATH="$DRIPPER_ROOT/share/dripper/definitions"
+LIBEXEC_PATH="$DRIPPER_ROOT/libexec"
 
 mkdir -p $BIN_PATH
 mkdir -p $SHARE_PATH
@@ -28,14 +28,15 @@ for file in libexec/*; do
   cp $file $LIBEXEC_PATH
 done
 
-echo "Installed dripper at $PREFIX"
+echo "Installed dripper at $DRIPPER_ROOT"
 
 if [[ ! $(which drip) ]]; then
   echo "
 Seems you still have not added '.packages' to the load path:
 
-  if [ -d \$HOME/.packages ]; then
-    export PATH=\"\$HOME/.packages/bin:\$PATH\"
+  DRIPPER_ROOT=$DRIPPER_ROOT
+  if [ -d \$DRIPPER_ROOT ]; then
+    export PATH=\"\$DRIPPER_ROOT/bin:\$PATH\"
   fi
 "
 fi

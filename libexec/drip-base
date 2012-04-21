@@ -3,29 +3,29 @@
 source drip-helper
 
 if [ $(id -u) = "0" ]; then
-  LOCAL_PATH=/usr/local
+  DRIPPER_ROOT=/usr/local
 else
-  LOCAL_PATH=$HOME/.packages
+  DRIPPER_ROOT=$HOME/.packages
 fi
 
 CMD='drip'
 
-SRC_PATH=$LOCAL_PATH/src
+SRC_PATH=$DRIPPER_ROOT/src
 mkdir -p $SRC_PATH
 
 # We should be able to set a custom $STOW_PATH!
 if [ ! -n "${STOW_PATH}" ]; then
-  STOW_PATH=$LOCAL_PATH/stow
+  STOW_PATH=$DRIPPER_ROOT/stow
 fi
 mkdir -p $STOW_PATH
 
-mkdir -p $LOCAL_PATH/{bin,include,lib,libexec,var,info}
-mkdir -p $LOCAL_PATH/etc/bash_completion.d
-mkdir -p $LOCAL_PATH/Library
+mkdir -p $DRIPPER_ROOT/{bin,include,lib,libexec,var,info}
+mkdir -p $DRIPPER_ROOT/etc/bash_completion.d
+mkdir -p $DRIPPER_ROOT/Library
 
 # Man files can be in two different locations:
-mkdir -p $LOCAL_PATH/man/{man1,man2,man3,man4,man5,man6,man7,man8,man9,mann}
-mkdir -p $LOCAL_PATH/share/man/{man1,man2,man3,man4,man5,man6,man7,man8,man9,mann}
+mkdir -p $DRIPPER_ROOT/man/{man1,man2,man3,man4,man5,man6,man7,man8,man9,mann}
+mkdir -p $DRIPPER_ROOT/share/man/{man1,man2,man3,man4,man5,man6,man7,man8,man9,mann}
 
 # If STOW_DEFINITIONS_PATH not defined we add a default. We want to
 # allow other developers to use their own definitions.

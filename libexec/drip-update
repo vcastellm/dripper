@@ -5,7 +5,7 @@ source drip-base
 
 require_git
 
-cd $LOCAL_PATH
+cd $DRIPPER_ROOT
 
 if [ ! -d .git ]; then
   git init
