@@ -3,7 +3,7 @@
 require_darwin() {
   if [ ! $(uname) == 'Darwin' ]; then
     echo "This \`definition' is only valid for Darwin."
-    exit
+    exit 1
   fi
 }
 
