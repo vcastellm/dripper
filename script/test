@@ -7,6 +7,4 @@ if [ -z $(which cram) ]; then
   exit 1
 fi
 
-for file in test/*.t; do
-  cram -v $file
-done
+cram -vi test/*.t
