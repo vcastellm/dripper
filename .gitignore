@@ -4,8 +4,6 @@ etc/
 include/
 info/
 lib/
-libexec/
-!libexec/stow*
 src/
 stow/
 var/
