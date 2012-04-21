@@ -27,3 +27,6 @@ mkdir -p $LOCAL_PATH/share/man/{man1,man2,man3,man4,man5,man6,man7,man8,man9,man
 # Set STOW_PATH and STOW_DEFINITIONS_PATH!
 STOW_PATH=$LOCAL_PATH/stow
 STOW_DEFINITIONS_PATH="$(abs_dirname "$0")/../share/stow/definitions"
+
+# Set repository location:
+REPOSITORY=git://github.com/fesplugas/stow-manager.git

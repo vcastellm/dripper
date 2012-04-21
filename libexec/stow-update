@@ -5,8 +5,6 @@ source stow-base
 
 require_git
 
-REPOSITORY=git://github.com/fesplugas/stow-manager.git
-
 cd $LOCAL_PATH
 
 if [ ! -d .git ]; then
