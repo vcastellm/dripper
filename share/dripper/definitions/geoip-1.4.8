@@ -8,7 +8,7 @@ set_variables
 if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   curl -O http://www.maxmind.com/download/geoip/api/c/$STOW.tar.gz
-  tar xf $STOW.tar.gz
+  tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
     --prefix=$PREFIX

@@ -8,7 +8,7 @@ set_variables
 if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   curl -O http://netcologne.dl.sourceforge.net/project/tmux/tmux/$STOW/$STOW.tar.gz
-  tar xvf $STOW.tar.gz
+  tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
     --prefix=$PREFIX \

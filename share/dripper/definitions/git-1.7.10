@@ -9,7 +9,7 @@ if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   # TODO: Detect if package has been already been downloaded.
   curl -O http://git-core.googlecode.com/files/$STOW.tar.gz
-  tar xf $STOW.tar.gz
+  tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
     --prefix=$PREFIX

@@ -9,7 +9,7 @@ URL=http://garr.dl.sourceforge.net/project/ctags/ctags/$VERSION/$STOW.tar.gz
 if [ ! -z $_INSTALL ]; then
   pushd $SRC_PATH
   curl -O $URL
-  tar xvf $STOW.tar.gz
+  tar xzf $STOW.tar.gz
   cd $STOW
   ./configure \
     --prefix=$PREFIX \
