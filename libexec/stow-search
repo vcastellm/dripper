@@ -2,7 +2,11 @@
 
 source stow-base
 
-PACKAGES=$(ls ${STOW_DEFINITIONS_PATH})
+if [ $1 ]; then
+  PACKAGES=$(ls ${STOW_DEFINITIONS_PATH}/*$1*)
+else
+  PACKAGES=$(ls ${STOW_DEFINITIONS_PATH})
+fi
 
 list_definitions() {
   for item in ${PACKAGES}; do
