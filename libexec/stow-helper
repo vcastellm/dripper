@@ -21,6 +21,7 @@ set_variables() {
   PREFIX=$STOW_PATH/$STOW
 }
 
+# TODO: Detect similar formula linked.
 stow_link() {
   if [ -f $STOW_PATH/.${STOW} ]; then
     echo "$STOW already linked."
