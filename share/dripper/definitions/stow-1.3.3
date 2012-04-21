@@ -12,21 +12,20 @@ if [ ! -z $_INSTALL ]; then
   cd $STOW
   ./configure \
     --prefix=$PREFIX \
-    --program-suffix=_local \
     --disable-dependency-tracking
   make install
   popd
 
   # FIXME: Force the removal of the man folder because for some weird
-  #       reason raises an error. Needs investigation.
+  #        reason raises an error. Needs investigation.
   rm -rf $PREFIX/man
 
-  $PREFIX/bin/$STOW_BINARY -d $STOW_PATH $STOW
+  $PREFIX/bin/stow -d $STOW_PATH $STOW
   # Skip default task!
   exit
 fi
 
 if [ ! -z $_LINK ]; then
-  $PREFIX/bin/$STOW_BINARY -v -d $STOW_PATH $STOW
+  $PREFIX/bin/stow -v -d $STOW_PATH $STOW
   exit
 fi

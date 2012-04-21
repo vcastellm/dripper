@@ -29,7 +29,7 @@ stow_link() {
   fi
 
   if [ -d $STOW_PATH/$STOW ]; then
-    $STOW_BINARY -v -d $STOW_PATH $STOW
+    stow -v -d $STOW_PATH $STOW
     touch $STOW_PATH/.${STOW}
   else
     echo "Error: $STOW is not installed."
@@ -44,7 +44,7 @@ stow_unlink() {
   fi
 
   if [ -d $STOW_PATH/$STOW ]; then
-    $STOW_BINARY -v -D -d $STOW_PATH $STOW
+    stow -v -D -d $STOW_PATH $STOW
     rm $STOW_PATH/.${STOW}
   else
     echo "Error: $STOW is not installed."

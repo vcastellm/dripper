@@ -11,7 +11,7 @@ set_options $*
 if [ -n "$all" ]; then
   for item in $STOW_PATH/*; do
     current_stow=${item##*/}
-    $STOW_BINARY -v -d $STOW_PATH $current_stow
+    stow -v -d $STOW_PATH $current_stow
   done
 
   exit

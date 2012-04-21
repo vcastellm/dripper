@@ -10,7 +10,7 @@ if [ -n "$all" ]; then
   for stow in $STOW_PATH/*; do
     current_stow=${stow##*/}
     if [ ! $current_stow = 'stow-1.3.3' ]; then
-      $STOW_BINARY -v -D -d $STOW_PATH $current_stow
+      stow -v -D -d $STOW_PATH $current_stow
     else
       special_definition='stow-1.3.3'
     fi
@@ -19,7 +19,7 @@ if [ -n "$all" ]; then
   # Last package we want to remove is `stow` otherwise we would be
   # unable to run `stow` to unlink packages.
   if [ -n "$special_definition" ]; then
-    $STOW_BINARY -v -D -d $STOW_PATH $special_definition
+    stow -v -D -d $STOW_PATH $special_definition
   fi
   exit
 fi
