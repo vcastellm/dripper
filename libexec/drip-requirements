@@ -14,16 +14,21 @@ require_hg() {
   fi
 }
 
+# TODO: `drip install git` should detect latest version.
 require_git() {
   if [ ! $(which git) ]; then
     echo "Dripper needs \`git' installed on the system."
+    echo ""
+    echo "    drip install git-1.7.10"
+    echo ""
     exit
   fi
 }
 
+# TODO: `drip install stow` should detect latest version.
 require_stow() {
   if [ ! $(which stow) ]; then
-    echo "Dripper needs \`stow' installed on the system:"
+    echo "Dripper needs \`stow' installed on the system."
     echo ""
     echo "    drip install stow-1.3.3"
     echo ""

@@ -49,10 +49,6 @@ You can get a list of all available commands by running `drip`.
 Requirements
 ------------
 
-You'll need `git` to be able to update **Dripper**:
-
-    drip install git-1.7.1.0
-
 Some `definitions` require `hg`. At this moment the best thing you can
 do to install Mercurial is by using `pip`:
 
