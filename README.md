@@ -14,13 +14,6 @@ Clone the repository and run the install script:
     cd dripper
     ./install.sh
 
-If you install **Dripper** in single user mode add the following
-lines to your `.bashrc`:
-
-    if [ -d $HOME/.packages ]; then
-      export PATH="$HOME/.packages/bin:$PATH"
-    fi
-
 
 Usage
 -----
@@ -35,16 +28,6 @@ Common operations:
     drip update
 
 You can get a list of all available commands by running `drip`.
-
-
-Requirements
-------------
-
-Some `definitions` require `hg`. At this moment the best thing you can
-do to install Mercurial is by using `pip`:
-
-    sudo easy_install pip
-    sudo pip install mercurial
 
 
 Tips & Tricks
@@ -82,6 +65,7 @@ TODO and Whishlist
 - `drip uninstall`: `drip unlink --all` && `drip cleanup`.
 - Detect already installed `packages`.
 - Do not allow to link the same package with different versions.
+- Better explanation on how to install `hg`.
 
 
 Acknowledgements
