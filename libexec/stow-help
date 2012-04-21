@@ -4,15 +4,14 @@ source stow-base
 
 echo "usage: $CMD <command> [<args>]
 
-The most commonly used stow commands are:
+The most commonly used $CMD commands are:
 
    search     Search a definition
    list       List installed packages
    install    Install a definition
    uninstall  Uninstall a definition
-   update     Update stow repository
+   update     Fetch new version and definitions
    show       Show a definition
-   package    Build a package and install (Pending)
    info       Show definition info
    link       Link package
    unlink     Unlink package
