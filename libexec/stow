@@ -3,6 +3,7 @@
 set -e
 [ -n "$DEBUG" ] && set -x
 
+CMD='stow'
 VERSION='0.0.1'
 
 resolve_link() {
@@ -30,12 +31,12 @@ export PATH="${libexec_path}:${bin_path}:${PATH}"
 command="$1"
 case "$command" in
 "" | "-h" | "--help" )
-  echo -e "$(stow-help)" >&2
+  echo -e "$($CMD-help)" >&2
   ;;
 * )
-  command_path="$(command -v "stow-$command" || true)"
+  command_path="$(command -v "$CMD-$command" || true)"
   if [ -z "$command_path" ]; then
-    echo "stow: no such command \`$command'" >&2
+    echo "$CMD: no such command \`$command'" >&2
     exit 1
   fi
 
