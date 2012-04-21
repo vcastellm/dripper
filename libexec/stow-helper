@@ -24,7 +24,7 @@ set_variables() {
 stow_link() {
   if [ -f $STOW_PATH/.${STOW} ]; then
     echo "$STOW already linked."
-    exit 0
+    exit 1
   fi
 
   if [ -d $STOW_PATH/$STOW ]; then
@@ -39,7 +39,7 @@ stow_link() {
 stow_unlink() {
   if [ ! -f $STOW_PATH/.${STOW} ]; then
     echo "$STOW not linked."
-    exit 0
+    exit 1
   fi
 
   if [ -d $STOW_PATH/$STOW ]; then
