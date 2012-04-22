@@ -20,5 +20,4 @@ Create `link` does not link an already linked package:
   $ mkdir $TESTDIR/tmp/git-1.7.10
   $ STOW_PATH=$TESTDIR/tmp $TESTDIR/../bin/drip link git-1.7.10
   git-1.7.10 already linked.
-  [1]
   $ rm $STOW_FILE_CONTROL

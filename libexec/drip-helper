@@ -30,7 +30,6 @@ stow_link() {
 
   if [ -f $STOW_PATH/.stow_${STOW} ]; then
     echo "$STOW already linked."
-    exit 1
   else
     echo "${STOW} linked."
     stow -d $STOW_PATH $STOW
