@@ -26,5 +26,6 @@ fi
 
 if _link; then
   $PREFIX/bin/stow -v -d $STOW_PATH $STOW
+  touch $STOW_PATH/.stow_$STOW
   exit
 fi
