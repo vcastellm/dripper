@@ -62,7 +62,6 @@ TODO and Whishlist
 
 - Package and install from url.
 - Do not download a package if already in `$SRC_PATH`.
-- Detect already installed `packages`.
 - Do not allow to link the same package with different versions.
 - Better explanation on how to install `hg`.
 
