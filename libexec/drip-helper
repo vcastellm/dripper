@@ -30,7 +30,7 @@ stow_link() {
 
   if [ -d $STOW_PATH/$STOW ]; then
     stow -v -d $STOW_PATH $STOW
-    touch $STOW_PATH/.${STOW}
+    touch $STOW_PATH/.stow_${STOW}
   else
     echo "Error: $STOW is not installed."
     exit 1
