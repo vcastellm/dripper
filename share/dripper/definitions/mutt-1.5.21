@@ -5,7 +5,7 @@ VERSION=1.5.21
 
 set_variables
 
-if [ ! -z $_INSTALL ]; then
+if _install; then
   pushd $SRC_PATH
   curl -O ftp://ftp.mutt.org/mutt/devel/$STOW.tar.gz
   tar xzf $STOW.tar.gz

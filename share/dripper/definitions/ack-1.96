@@ -5,7 +5,7 @@ VERSION=1.96
 
 set_variables
 
-if [ ! -z $_INSTALL ]; then
+if _install; then
   mkdir -p $PREFIX/bin
 
   pushd $SRC_PATH

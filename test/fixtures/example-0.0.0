@@ -9,17 +9,17 @@ echo "Version: $VERSION"
 
 set_variables
 
-if [ ! -z $_INSTALL ]; then
+if _install; then
   echo "=> Install"
   exit
 fi
 
-if [ ! -z $_UNINSTALL ]; then
+if _uninstall; then
   echo "=> Uninstall"
   exit
 fi
 
-if [ ! -z $_INFO ]; then
+if _info; then
   echo "=> Info"
   exit
 fi
