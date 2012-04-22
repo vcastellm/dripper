@@ -24,6 +24,7 @@ set_variables() {
 verify_installed() {
   if [ ! -d $STOW_PATH/$1 ]; then
     echo "Error: ${1} is not installed."
+    exit 1
   fi
 }
 
