@@ -26,7 +26,7 @@ fi
 
 if _link; then
   $PREFIX/bin/stow -d $STOW_PATH $STOW
-  echo "Linked $STOW."
+  echo "$STOW linked."
   touch $STOW_PATH/.stow_$STOW
   exit
 fi

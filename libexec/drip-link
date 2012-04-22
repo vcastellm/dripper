@@ -9,15 +9,7 @@ set_options $*
 
 # drip link --all
 if [ -n "$all" ]; then
-  # TODO: Move this to `drip-helper` so we can share the code with the
-  #       default link.
-  for item in $STOW_PATH/*; do
-    current_stow=${item##*/}
-    stow -d $STOW_PATH $current_stow
-    touch $STOW_PATH/.stow_$current_stow
-  done
-
-  exit
+  stow_link_all
 fi
 
 # drip link <packages>

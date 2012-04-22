@@ -13,7 +13,7 @@ if [ -n "$all" ]; then
     current_stow=${item##*/}
     if [ ! $current_stow = 'stow-1.3.3' ]; then
       stow -D -d $STOW_PATH $current_stow
-      echo "Unlinked $current_stow"
+      echo "${current_stow} unlinked."
       rm -f $STOW_PATH/.stow_$current_stow
     else
       special_definition='stow-1.3.3'
@@ -24,7 +24,7 @@ if [ -n "$all" ]; then
   # unable to run `stow` to unlink packages.
   if [ -n "$special_definition" ]; then
     stow -D -d $STOW_PATH $special_definition
-    echo "Unlinked $current_stow"
+    echo "${current_stow} unlinked."
     rm -f $STOW_PATH/.stow_$current_stow
   fi
   exit
