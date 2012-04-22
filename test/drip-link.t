@@ -26,6 +26,3 @@ Create `link` should detect similar linked definition:
 
   $ DRIPPER_ROOT=$TESTDIR/fixtures $TESTDIR/../bin/drip link ruby-1.9.3-p125
   ruby-1.9.3-p125 already linked.
-
-  $ DRIPPER_ROOT=$TESTDIR/fixtures $TESTDIR/../bin/drip link ruby-1.9.3-p194
-  ruby-1.9.3-p194 linked.
