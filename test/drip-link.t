@@ -15,8 +15,9 @@ Create `link` validates package has been installed:
 
 Create `link` does not link an already linked package:
 
-  $ touch $TESTDIR/tmp/.git-1.7.10
+  $ STOW_FILE_CONTROL=$TESTDIR/tmp/.stow_git-1.7.10
+  $ touch $STOW_FILE_CONTROL
   $ STOW_PATH=$TESTDIR/tmp $TESTDIR/../bin/drip link git-1.7.10
   git-1.7.10 already linked.
   [1]
-  $ rm $TESTDIR/tmp/.git-1.7.10
+  $ rm $STOW_FILE_CONTROL
