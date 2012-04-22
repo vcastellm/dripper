@@ -3,9 +3,13 @@
 source drip-helper
 
 if [ $(id -u) = "0" ]; then
-  DRIPPER_ROOT=/usr/local
+  DEFAULT_DRIPPER_ROOT=/usr/local
 else
-  DRIPPER_ROOT=$HOME/.packages
+  DEFAULT_DRIPPER_ROOT=$HOME/.packages
+fi
+
+if [ -z "${DRIPPER_ROOT}" ]; then
+  DRIPPER_ROOT=$DEFAULT_DRIPPER_ROOT
 fi
 
 SRC_PATH=$DRIPPER_ROOT/src
