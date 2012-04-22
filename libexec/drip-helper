@@ -25,7 +25,7 @@ set_variables() {
 stow_link() {
   if [ ! -d $STOW_PATH/$STOW ]; then
     echo "Error: $STOW is not installed."
-    exit
+    exit 1
   fi
 
   if [ -f $STOW_PATH/.stow_${STOW} ]; then
