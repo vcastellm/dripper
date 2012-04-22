@@ -2,6 +2,11 @@
 
 set -e
 
+if [ -z $(which stow) ]; then
+  echo "\`stow' not installed."
+  exit 1
+fi
+
 if [ -z $(which cram) ]; then
   echo "Cram not installed. Install with \`pip install cram'."
   echo "More info about cram at https://bitheap.org/cram/"
