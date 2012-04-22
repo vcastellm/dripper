@@ -17,7 +17,12 @@ fi
 
 list_definitions() {
   for item in $PACKAGES; do
-    echo "${item##*/}"
+    current_item=${item##*/}
+    if [ -d ${STOW_PATH}/${current_item} ]; then
+      echo "${current_item} (Installed)"
+    else
+      echo "${current_item}"
+    fi
   done
 }
 
