@@ -3,20 +3,21 @@
 source drip-base
 
 PACKAGES=$(ls -xt ${STOW_PATH})
-INSTALLED_PACKAGES=$(find $STOW_PATH -name ".stow_*" -print)
 
 list_stows() {
   for item in $PACKAGES; do
     current_item=${item##*/}
     if [ -f ${STOW_PATH}/.stow_${current_item} ]; then
       echo $current_item
+    else
+      echo "${current_item} (Not linked)"
     fi
   done
 }
 
-if [ -n "${INSTALLED_PACKAGES}" ]; then
+if [ -n "${PACKAGES}" ]; then
   list_stows
 else
-  echo "No linked packages found."
+  echo "No packages found."
   exit 1
 fi
