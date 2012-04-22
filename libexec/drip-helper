@@ -41,8 +41,6 @@ stow_link_one() {
   stow_link $STOW
 }
 
-# TODO: Move this to `drip-helper` so we can share the code with the
-#       default link.
 stow_link_all() {
   for item in $STOW_PATH/*; do
     stow_link ${item##*/}
