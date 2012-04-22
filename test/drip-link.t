@@ -1,13 +1,13 @@
 Create `link` validates provided `package`:
 
-  $ $TESTDIR/../bin/drip info example
+  $ STOW_DEFINITIONS_PATH=$TESTDIR/fixtures $TESTDIR/../bin/drip info example
   No available definition for example. Suggested packages:
   => example-0.0.0
   [1]
 
 Create `link` validates package has been installed:
 
-  $ $TESTDIR/../bin/drip link example-0.0.0
+  $ STOW_DEFINITIONS_PATH=$TESTDIR/fixtures $TESTDIR/../bin/drip link example-0.0.0
   Package: example
   Version: 0.0.0
   Error: example-0.0.0 is not installed.

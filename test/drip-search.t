@@ -3,7 +3,6 @@ Search should return a list of available definitions:
   $ $TESTDIR/../bin/drip search
   ack-1.96
   ctags-5.8
-  example-0.0.0
   geoip-1.4.8
   git-1.7.10
   imagemagick-6.7.5
