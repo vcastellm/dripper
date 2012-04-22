@@ -7,6 +7,8 @@ set_options $*
 
 # drip unlink --all
 if [ -n "$all" ]; then
+  # TODO: Move this to `drip-helper` so we can share the code with the
+  #       default unlink.
   for item in $STOW_PATH/*; do
     current_stow=${item##*/}
     if [ ! $current_stow = 'stow-1.3.3' ]; then
