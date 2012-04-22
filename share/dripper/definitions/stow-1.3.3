@@ -21,6 +21,7 @@ if _install; then
   rm -rf $PREFIX/man
 
   $PREFIX/bin/stow -d $STOW_PATH $STOW
+  touch $STOW_PATH/.stow_$STOW
   exit
 fi
 
