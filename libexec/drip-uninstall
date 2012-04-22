@@ -11,5 +11,5 @@ stow_remove() {
   rm -rf $STOW_PATH/$STOW
 }
 
-stow_unlink
+stow_unlink_one
 stow_remove

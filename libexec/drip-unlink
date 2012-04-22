@@ -33,4 +33,4 @@ fi
 # drip unlink <package>
 source drip-validator
 source $STOW_DEFINITIONS_PATH/$1
-stow_unlink
+stow_unlink_one

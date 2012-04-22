@@ -21,6 +21,14 @@ set_variables() {
   PREFIX=$STOW_PATH/$STOW
 }
 
+verify_installed() {
+  if [ ! -d $STOW_PATH/$STOW ]; then
+    echo "Error: $STOW is not installed."
+    exit 1
+  fi
+}
+
+# TODO: Before linking detect similar formula linked!
 stow_link() {
   if [ -f $STOW_PATH/.stow_${1} ]; then
     echo "${1} already linked."
@@ -31,14 +39,24 @@ stow_link() {
   fi
 }
 
-# TODO: Detect similar formula linked.
-stow_link_one() {
-  if [ ! -d $STOW_PATH/$STOW ]; then
-    echo "Error: $STOW is not installed."
-    exit 1
+stow_unlink() {
+  if [ ! -f $STOW_PATH/.stow_${1} ]; then
+    echo "${1} not linked."
+  else
+    echo "${1} unlinked."
+    stow -d $STOW_PATH $1
+    rm $STOW_PATH/.stow_${1}
   fi
+}
 
+stow_link_one() {
+  verify_installed
   stow_link $STOW
+}
+
+stow_unlink_one() {
+  verify_installed
+  stow_unlink $STOW
 }
 
 stow_link_all() {
@@ -47,20 +65,10 @@ stow_link_all() {
   done
 }
 
-stow_unlink() {
-  if [ ! -f $STOW_PATH/.stow_${STOW} ]; then
-    echo "$STOW not linked."
-    exit 1
-  fi
-
-  if [ -d $STOW_PATH/$STOW ]; then
-    echo "Unlinked ${STOW}."
-    stow -D -d $STOW_PATH $STOW
-    rm $STOW_PATH/.stow_${STOW}
-  else
-    echo "Error: $STOW is not installed."
-    exit 1
-  fi
+stow_unlink_all() {
+  for item in $STOW_PATH/*; do
+    stow_unlink ${item##*/}
+  done
 }
 
 _install() {
