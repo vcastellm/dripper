@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-source drip-helper
+if [ -z "$DRIPPER_DEBUG" ]; then
+  source drip-helper
+fi
 
 if [ $(id -u) = "0" ]; then
   DEFAULT_DRIPPER_ROOT=/usr/local
@@ -37,3 +39,16 @@ fi
 
 # Set repository location:
 REPOSITORY=git://github.com/fesplugas/dripper.git
+
+if [ -n "$DRIPPER_DEBUG" ]; then
+  echo "DEFAULT_DRIPPER_ROOT"
+  echo $DEFAULT_DRIPPER_ROOT
+  echo "DRIPPER_ROOT"
+  echo $DRIPPER_ROOT
+  echo "STOW_DEFINITIONS_PATH"
+  echo $STOW_DEFINITIONS_PATH
+  echo "STOW_PATH"
+  echo $STOW_PATH
+  echo "REPOSITORY"
+  echo $REPOSITORY
+fi
