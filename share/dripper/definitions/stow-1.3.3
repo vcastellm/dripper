@@ -25,7 +25,8 @@ if _install; then
 fi
 
 if _link; then
-  $PREFIX/bin/stow -v -d $STOW_PATH $STOW
+  $PREFIX/bin/stow -d $STOW_PATH $STOW
+  echo "Linked $STOW."
   touch $STOW_PATH/.stow_$STOW
   exit
 fi

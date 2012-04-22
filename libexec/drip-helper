@@ -29,7 +29,7 @@ stow_link() {
   fi
 
   if [ -d $STOW_PATH/$STOW ]; then
-    echo "Linked ${STOW}"
+    echo "Linked ${STOW}."
     touch $STOW_PATH/.stow_${STOW}
     stow -d $STOW_PATH $STOW
   else
@@ -45,7 +45,8 @@ stow_unlink() {
   fi
 
   if [ -d $STOW_PATH/$STOW ]; then
-    stow -v -D -d $STOW_PATH $STOW
+    echo "Unlinked ${STOW}."
+    stow -D -d $STOW_PATH $STOW
     rm $STOW_PATH/.stow_${STOW}
   else
     echo "Error: $STOW is not installed."
