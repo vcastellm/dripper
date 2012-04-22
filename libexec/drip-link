@@ -12,6 +12,7 @@ if [ -n "$all" ]; then
   for item in $STOW_PATH/*; do
     current_stow=${item##*/}
     stow -v -d $STOW_PATH $current_stow
+    touch $STOW_PATH/.stow_$current_stow
   done
 
   exit
