@@ -22,9 +22,8 @@ set_variables() {
 }
 
 verify_installed() {
-  if [ ! -d $STOW_PATH/$STOW ]; then
-    echo "Error: $STOW is not installed."
-    exit 1
+  if [ ! -d $STOW_PATH/$1 ]; then
+    echo "Error: ${1} is not installed."
   fi
 }
 
@@ -44,18 +43,18 @@ stow_unlink() {
     echo "${1} not linked."
   else
     echo "${1} unlinked."
-    stow -d $STOW_PATH $1
+    stow -D -d $STOW_PATH ${1}
     rm $STOW_PATH/.stow_${1}
   fi
 }
 
 stow_link_one() {
-  verify_installed
+  verify_installed $STOW
   stow_link $STOW
 }
 
 stow_unlink_one() {
-  verify_installed
+  verify_installed $STOW
   stow_unlink $STOW
 }
 
@@ -67,7 +66,12 @@ stow_link_all() {
 
 stow_unlink_all() {
   for item in $STOW_PATH/*; do
-    stow_unlink ${item##*/}
+    item=${item##*/}
+    if [ $item = 'stow-1.3.3' ]; then
+      echo "${item} not unlinked."
+    else
+      stow_unlink $item
+    fi
   done
 }
 

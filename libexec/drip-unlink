@@ -5,32 +5,12 @@ source drip-base
 
 set_options $*
 
-# drip unlink --all
 if [ -n "$all" ]; then
-  # TODO: Move this to `drip-helper` so we can share the code with the
-  #       default unlink.
-  for item in $STOW_PATH/*; do
-    current_stow=${item##*/}
-    if [ ! $current_stow = 'stow-1.3.3' ]; then
-      stow -D -d $STOW_PATH $current_stow
-      echo "${current_stow} unlinked."
-      rm -f $STOW_PATH/.stow_$current_stow
-    else
-      special_definition='stow-1.3.3'
-    fi
-  done
-
-  # Last package we want to remove is `stow` otherwise we would be
-  # unable to run `stow` to unlink packages.
-  if [ -n "$special_definition" ]; then
-    stow -D -d $STOW_PATH $special_definition
-    echo "${current_stow} unlinked."
-    rm -f $STOW_PATH/.stow_$current_stow
-  fi
-  exit
+  # drip unlink --all
+  stow_unlink_all
+else
+  # drip unlink <package>
+  source drip-validator
+  source $STOW_DEFINITIONS_PATH/$1
+  stow_unlink_one
 fi
-
-# drip unlink <package>
-source drip-validator
-source $STOW_DEFINITIONS_PATH/$1
-stow_unlink_one
