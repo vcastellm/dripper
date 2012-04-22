@@ -9,5 +9,5 @@ Test what drip-base sets ...
   /Users/fesplugas/Development/dripper/test/fixtures
   STOW_PATH
   /Users/fesplugas/Development/dripper/test/tmp/packages/stow
-  REPOSITORY
+  DRIPPER_REPOSITORY
   git://github.com/fesplugas/dripper.git

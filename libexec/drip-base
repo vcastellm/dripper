@@ -38,7 +38,7 @@ if [ ! -n "${STOW_DEFINITIONS_PATH}" ]; then
 fi
 
 # Set repository location:
-REPOSITORY=git://github.com/fesplugas/dripper.git
+DRIPPER_REPOSITORY=git://github.com/fesplugas/dripper.git
 
 if [ -n "$DRIPPER_DEBUG" ]; then
   echo "DEFAULT_DRIPPER_ROOT"
@@ -49,6 +49,6 @@ if [ -n "$DRIPPER_DEBUG" ]; then
   echo $STOW_DEFINITIONS_PATH
   echo "STOW_PATH"
   echo $STOW_PATH
-  echo "REPOSITORY"
-  echo $REPOSITORY
+  echo "DRIPPER_REPOSITORY"
+  echo $DRIPPER_REPOSITORY
 fi
