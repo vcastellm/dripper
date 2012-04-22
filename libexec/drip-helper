@@ -21,37 +21,32 @@ set_variables() {
   PREFIX=$STOW_PATH/$STOW
 }
 
-# TODO: Detect similar formula linked.
 stow_link() {
+  if [ -f $STOW_PATH/.stow_${1} ]; then
+    echo "${1} already linked."
+  else
+    echo "${1} linked."
+    stow -d $STOW_PATH $1
+    touch $STOW_PATH/.stow_${1}
+  fi
+}
+
+# TODO: Detect similar formula linked.
+stow_link_one() {
   if [ ! -d $STOW_PATH/$STOW ]; then
     echo "Error: $STOW is not installed."
     exit 1
   fi
 
-  if [ -f $STOW_PATH/.stow_${STOW} ]; then
-    echo "$STOW already linked."
-  else
-    echo "${STOW} linked."
-    stow -d $STOW_PATH $STOW
-    touch $STOW_PATH/.stow_${STOW}
-  fi
+  stow_link $STOW
 }
 
 # TODO: Move this to `drip-helper` so we can share the code with the
 #       default link.
 stow_link_all() {
   for item in $STOW_PATH/*; do
-    item=${item##*/}
-    if [ -f $STOW_PATH/.stow_${item} ]; then
-      echo "${item} already linked."
-    else
-      echo "${item} linked."
-      stow -d $STOW_PATH $item
-      touch $STOW_PATH/.stow_${item}
-    fi
+    stow_link ${item##*/}
   done
-
-  exit
 }
 
 stow_unlink() {

@@ -14,5 +14,5 @@ if [ -d $STOW_PATH/$1 ]; then
   drip link $1
 else
   source $STOW_DEFINITIONS_PATH/$1
-  stow_link
+  stow_link_one
 fi
