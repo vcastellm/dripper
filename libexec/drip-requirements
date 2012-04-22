@@ -35,7 +35,7 @@ require_stow() {
     exit 1
   fi
 
-  if [ ! -z "$DRIPPER_DEBUG" ]; then
+  if [ -n "$DRIPPER_DEBUG" ]; then
     echo "Skip install of stow because we are in debug mode."
     exit 1
   fi
