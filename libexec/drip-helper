@@ -41,13 +41,13 @@ stow_link() {
 #       default link.
 stow_link_all() {
   for item in $STOW_PATH/*; do
-    current_stow=${item##*/}
-    if [ -f $STOW_PATH/.stow_${current_stow} ]; then
-      echo "${current_stow} already linked."
+    item=${item##*/}
+    if [ -f $STOW_PATH/.stow_${item} ]; then
+      echo "${item} already linked."
     else
-      echo "${current_stow} linked."
-      stow -d $STOW_PATH $current_stow
-      touch $STOW_PATH/.stow_${current_stow}
+      echo "${item} linked."
+      stow -d $STOW_PATH $item
+      touch $STOW_PATH/.stow_${item}
     fi
   done
 
