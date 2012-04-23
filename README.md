@@ -14,7 +14,7 @@ Clone the repository and run the install script:
 
     git clone git://github.com/fesplugas/dripper.git
     cd dripper
-    ./install.sh
+    script/install
 
 
 ### Using the installer
