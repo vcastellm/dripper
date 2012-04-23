@@ -8,11 +8,18 @@ with [stow], the GNU package manager.
 Install
 -------
 
+### Using Git
+
 Clone the repository and run the install script:
 
     git clone git://github.com/fesplugas/dripper.git
     cd dripper
     ./install.sh
+
+
+### Using the installer
+
+    curl -L https://raw.github.com/fesplugas/dripper/master/script/installer | bash
 
 
 Usage
