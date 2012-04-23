@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dripper by fesplugas</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Dripper</h1>
+        <p>Shell script &quot;alternative&quot; to Homebrew which works on OS X and Linux.</p>
+        <p class="view"><a href="https://github.com/fesplugas/dripper">View the Project on GitHub <small>fesplugas/dripper</small></a></p>
+        <ul>
+          <li><a href="https://github.com/fesplugas/dripper/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/fesplugas/dripper/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/fesplugas/dripper">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Dripper</h1>
+
+<p><strong>Dripper</strong> is a collection of definitions to install software packages
+with <a href="http://www.gnu.org/s/stow/">stow</a>, the GNU package manager.</p>
+
+<h2>Install</h2>
+
+<h3>Using Git</h3>
+
+<p>Clone the repository and run the install script:</p>
+
+<pre><code>git clone git://github.com/fesplugas/dripper.git
+cd dripper
+script/install
+</code></pre>
+
+<h3>Using the installer</h3>
+
+<pre><code>curl -L https://raw.github.com/fesplugas/dripper/master/script/installer | bash
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>Common operations:</p>
+
+<pre><code>drip install redis-2.4.10
+drip uninstall redis-2.4.10
+drip unlink redis-2.4.10
+drip link redis-2.4.10
+drip path redis-2.4.10
+drip update
+</code></pre>
+
+<p>You can get a list of all available commands by running <code>drip</code>.</p>
+
+<h2>Tips &amp; Tricks</h2>
+
+<p>Imagine you have different projects with different requirements and
+want to load a different <code>ruby</code> version for each one. Familiar, right?</p>
+
+<pre><code># Redefine `cd` to load environment variables from a `.env` file
+# if exists.
+function cd {
+  builtin cd "$@"
+  if [ -e ./.env ] ; then
+    source ./.env
+  fi
+}
+</code></pre>
+
+<p>Now you can add a <code>ruby</code> to the load path by running:</p>
+
+<pre><code>drip path ruby-1.9.3-p125 &gt; .env
+</code></pre>
+
+<h2>Conventions</h2>
+
+<ul>
+<li>Sources are downloaded into <code>/usr/local/src</code> or <code>$HOME/.packages/src</code>.</li>
+<li>Packages are compiled into <code>/usr/local/stow</code> or <code>$HOME/.packages/stow</code>.</li>
+</ul><h2>TODO and Whishlist</h2>
+
+<ul>
+<li>Package and install from url.</li>
+<li>Do not download a package if already in <code>$SRC_PATH</code>.</li>
+<li>Do not allow to link the same package with different versions.</li>
+<li>Better explanation on how to install <code>hg</code>.</li>
+</ul><h2>Acknowledgements</h2>
+
+<p>Thanks to <a href="https://github.com/mxcl/homebrew">Homebrew</a>, it's an awesome tool. As and <a href="http://www.gnu.org/s/stow/">stow</a> user I
+always wanted to do something similar and <a href="https://github.com/mxcl/homebrew">Homebrew</a> has inspired
+many of the commands used by <strong>Dripper</strong>.</p>
+
+<p>Thanks to <a href="https://github.com/sstephenson/ruby-build">ruby-build</a> and <a href="https://github.com/sstephenson/rbenv">rbenv</a>, project organization has been
+heavily inspired by them. Also some "helpers" used in <a href="https://github.com/fesplugas/dripper/blob/master/libexec/drip-helper">drip-helper</a>
+have been copied from <a href="https://github.com/sstephenson/rbenv">rbenv</a>.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/fesplugas">fesplugas</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
