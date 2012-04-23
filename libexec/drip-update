@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-source drip-requirements
 source drip-base
 
 require_git

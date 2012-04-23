@@ -15,19 +15,10 @@ if _install; then
     --disable-dependency-tracking
   make install
   popd
-
-  # FIXME: Force the removal of the man folder because for some weird
-  #        reason raises an error. Needs investigation.
-  rm -rf $PREFIX/man
-
-  $PREFIX/bin/stow -d $STOW_PATH $STOW
-  touch $STOW_PATH/.stow_$STOW
   exit
 fi
 
 if _link; then
-  $PREFIX/bin/stow -d $STOW_PATH $STOW
-  echo "$STOW linked."
-  touch $STOW_PATH/.stow_$STOW
+  echo "$1 already installed."
   exit
 fi

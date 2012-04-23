@@ -2,7 +2,6 @@
 
 _INSTALL=true
 
-source drip-requirements
 source drip-base
 source drip-validator
 

@@ -52,3 +52,7 @@ if [ -n "$DRIPPER_DEBUG" ]; then
   echo "DRIPPER_REPOSITORY"
   echo $DRIPPER_REPOSITORY
 fi
+
+if [ -z "$DRIPPER_DEBUG" ]; then
+  source drip-requirements
+fi

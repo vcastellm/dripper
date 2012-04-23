@@ -15,7 +15,6 @@ Search should return a list of available definitions:
   ruby-1.9.3-p125
   ruby-1.9.3-p194
   sphinx-2.0.4
-  stow-1.3.3
   tmux-1.6
   vim-7.3.492
 
@@ -33,7 +32,6 @@ Search should allow search by partial name:
   git-1.7.10
   mutt-1.5.21
   python-2.7.3
-  stow-1.3.3
   tmux-1.6
 
 Search should return a message when no definitions found:

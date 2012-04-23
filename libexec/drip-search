@@ -18,10 +18,13 @@ fi
 list_definitions() {
   for item in $PACKAGES; do
     current_item=${item##*/}
-    if [ -d ${STOW_PATH}/${current_item} ]; then
-      echo "${current_item} (Installed)"
-    else
-      echo "${current_item}"
+
+    if [ $current_item != 'stow-1.3.3' ]; then
+      if [ -d ${STOW_PATH}/${current_item} ]; then
+        echo "${current_item} (Installed)"
+      else
+        echo "${current_item}"
+      fi
     fi
   done
 }

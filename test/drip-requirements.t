@@ -25,15 +25,11 @@ Validates the requirement of `stow` in all definitions:
 
   $ PATH="/usr/bin:/bin"
   $ $TESTDIR/../bin/drip install vim-7.3.492
-  Dripper needs `stow' installed on the system.
-  
-      drip install stow-1.3.3
-  
+  Dripper needs `hg' installed on the system.
   [1]
 
 Skip the requirement of `stow` when installing `stow-1.3.3`:
 
   $ PATH="/usr/bin:/bin"
-  $ DRIPPER_DEBUG=true $TESTDIR/../bin/drip install stow-1.3.3
-  Skip install of stow because we are in debug mode.
-  [1]
+  $ $TESTDIR/../bin/drip install stow-1.3.3
+  stow-1.3.3 already installed.

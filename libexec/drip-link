@@ -2,7 +2,6 @@
 
 _LINK=true
 
-source drip-requirements
 source drip-base
 
 set_options $*
