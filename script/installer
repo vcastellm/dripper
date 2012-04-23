@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+install_master()
+{
+  echo "Downloading Dripper"
+  _url=https://github.com/fesplugas/dripper/tarball/master
+  curl -L ${_url} -o /tmp/dripper.tar.gz
+  pushd /tmp > /dev/null
+  tar xzf dripper.tar.gz
+  cd fesplugas-dripper*
+  ./script/install
+  popd /tmp > /dev/null
+}
+
+install_master
