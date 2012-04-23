@@ -20,15 +20,15 @@ mkdir -p $BIN_PATH
 mkdir -p $SHARE_PATH
 mkdir -p $LIBEXEC_PATH
 
-for file in bin/*; do
+for file in $PWD/bin/*; do
   cp $file $BIN_PATH
 done
 
-for file in share/dripper/definitions/*; do
+for file in $PWD/share/dripper/definitions/*; do
   cp $file $SHARE_PATH
 done
 
-for file in libexec/*; do
+for file in $PWD/libexec/*; do
   cp $file $LIBEXEC_PATH
 done
 
